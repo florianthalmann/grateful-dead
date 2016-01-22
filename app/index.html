@@ -12,10 +12,11 @@
 		<h1>Grateful Dead Mockup</h1>
 		<div>
 			<select ng-init="selectedSong = songs[0]" ng-model="selectedSong" ng-options="a.name for a in songs"></select>
-			<button ng-click="play()">Play</button>
 		</div>
 		<div ng-repeat="v in selectedSong.versions">
 			{{ v.name }}
+			<img ng-src="{{v.image}}" alt="Ticket" />
+			<button ng-click="play()">Play</button>
 		</div>
 	</div>
 </body>
