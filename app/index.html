@@ -10,13 +10,21 @@
 <body ng-app="gratefulDead">
 	<div  ng-controller="MainController">
 		<h1>Grateful Dead Mockup</h1>
-		<div>
-			<select ng-init="selectedSong = songs[0]" ng-model="selectedSong" ng-options="a.name for a in songs"></select>
+		<div ng-if="currentView == SHOW_VIEW">
+			<h2>{{ selectedShow.title }}</h2>
+			<h3>{{ selectedShow.coverage + ', ' + selectedShow.venue }}</h3>
+			<img ng-src="{{selectedShow.ticket}}" onerror="this.style.display='none'" alt="Ticket"/>
+			<img ng-src="{{selectedShow.pass}}" onerror="this.style.display='none'" alt="Pass"/>
+			<div ng-repeat="s in selectedShow.setlist">
+				<a ng-href="#" ng-click="gotoSongView(s)">{{s}}</a>
+			</div>
 		</div>
-		<div ng-repeat="v in selectedSong.versions">
-			{{ v.name }}
-			<img ng-src="{{v.image}}" alt="Ticket" />
-			<button ng-click="play()">Play</button>
+		<div ng-if="currentView == SONG_VIEW">
+			<h2>{{ selectedSong.name }}</h2>
+			<div ng-repeat="v in selectedSong.versions">
+				<a ng-href="#" ng-click="gotoShowView(v.name)">{{v.name}}</a>
+				<button ng-click="play()">Play</button>
+			</div>
 		</div>
 	</div>
 </body>
