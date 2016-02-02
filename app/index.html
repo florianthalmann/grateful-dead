@@ -13,17 +13,19 @@
 		<div ng-if="currentView == SHOW_VIEW">
 			<h2>{{ selectedShow.title }}</h2>
 			<h3>{{ selectedShow.coverage + ', ' + selectedShow.venue }}</h3>
-			<img ng-src="{{selectedShow.ticket}}" onerror="this.style.display='none'" alt="Ticket"/>
-			<img ng-src="{{selectedShow.pass}}" onerror="this.style.display='none'" alt="Pass"/>
+			<img ng-src="{{selectedShow.ticket}}" onerror="this.style.display='none'"/>
+			<img ng-src="{{selectedShow.pass}}" onerror="this.style.display='none'"/>
+			<img ng-src="{{selectedShow.poster}}" onerror="this.style.display='none'"/>
 			<div ng-repeat="s in selectedShow.setlist">
-				<a ng-href="#" ng-click="gotoSongView(s)">{{s}}</a>
+				<a ng-if="s.inSampleSongs" ng-href="#" ng-click="gotoSongView(s.plainTitle)">{{s.title}}</a>
+				<a ng-if="!s.inSampleSongs">{{s.title}}</a>
 			</div>
 		</div>
 		<div ng-if="currentView == SONG_VIEW">
 			<h2>{{ selectedSong.name }}</h2>
 			<div ng-repeat="v in selectedSong.versions">
-				<a ng-href="#" ng-click="gotoShowView(v.name)">{{v.name}}</a>
-				<button ng-click="play()">Play</button>
+				<a ng-href="#" ng-click="gotoShowView(v.identifier)">{{v.title}}</a>
+				<!--button ng-click="play()">Play</button-->
 			</div>
 		</div>
 	</div>
