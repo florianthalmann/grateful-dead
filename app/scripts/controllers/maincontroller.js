@@ -18,6 +18,14 @@
 				$scope.currentView = $scope.SONG_VIEW;
 			}
 			
+			$scope.gotoLocationView = function(locationName) {
+				$scope.selectedLocation = { name:locationName };
+				$http.jsonp('https://archive.org/advancedsearch.php?q=coverage:"' + locationName + '"+AND+collection:GratefulDead&fl%5B%5D=identifier,title&rows=100000&output=json&callback=JSON_CALLBACK').success(function(data) {
+					$scope.selectedLocation.shows = data.response.docs.filter(function(d){return $scope.sampleShowIds.indexOf(d.identifier) >= 0;});
+				});
+				$scope.currentView = $scope.LOCATION_VIEW;
+			}
+			
 			$scope.gotoShowView = function(showId) {
 				$scope.selectedShowID = showId;
 				$http.jsonp('https://archive.org/advancedsearch.php?q=collection:GratefulDead+AND+identifier:' + $scope.selectedShowID + '&fl%5B%5D=title,date,coverage,venue&output=json&callback=JSON_CALLBACK').success(function(data) {
@@ -76,7 +84,7 @@
 				$scope.sampleSongs = data.split('\n');
 				$http.get('files/temp_ids.txt').success(function(data) {
 					$scope.sampleShowIds = data.split('\n');
-					$scope.gotoSongView($scope.sampleSongs[0]);
+					$scope.gotoShowView($scope.sampleShowIds[0]);
 				});
 			});
 			

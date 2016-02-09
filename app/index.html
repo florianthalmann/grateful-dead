@@ -12,7 +12,8 @@
 		<h1>Grateful Dead Mockup</h1>
 		<div ng-if="currentView == SHOW_VIEW">
 			<h2>{{ selectedShow.title }}</h2>
-			<h3>{{ selectedShow.coverage + ', ' + selectedShow.venue }}</h3>
+			<h3><a ng-href="#" ng-click="gotoLocationView(selectedShow.coverage)">{{selectedShow.coverage}}</a></h3>
+			<h3>{{ selectedShow.venue }}</h3>
 			<img ng-src="{{selectedShow.ticket}}" onerror="this.style.display='none'"/>
 			<img ng-src="{{selectedShow.pass}}" onerror="this.style.display='none'"/>
 			<img ng-src="{{selectedShow.poster}}" onerror="this.style.display='none'"/>
@@ -26,6 +27,12 @@
 			<div ng-repeat="v in selectedSong.versions">
 				<a ng-href="#" ng-click="gotoShowView(v.identifier)">{{v.title}}</a>
 				<!--button ng-click="play()">Play</button-->
+			</div>
+		</div>
+		<div ng-if="currentView == LOCATION_VIEW">
+			<h2>{{ selectedLocation.name }}</h2>
+			<div ng-repeat="s in selectedLocation.shows">
+				<a ng-href="#" ng-click="gotoShowView(s.identifier)">{{s.title}}</a>
 			</div>
 		</div>
 	</div>
