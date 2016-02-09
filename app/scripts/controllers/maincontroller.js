@@ -1,14 +1,19 @@
 (function () {
 	'use strict';
 
-	angular.module('gratefulDead.controllers')
-		.config(function($httpProvider){
-			delete $httpProvider.defaults.headers.common['X-Requested-With'];
-		})
+	angular.module('gratefulDead.controllers', ['uiGmapgoogle-maps'])
+		.config(['uiGmapGoogleMapApiProvider', function(GoogleMapApiProviders) {
+			GoogleMapApiProviders.configure({
+				china: true
+			});
+		}])
 		.controller('MainController', ['$scope', '$http', function($scope, $http) {
 			
 			$scope.SHOW_VIEW = "Show View";
 			$scope.SONG_VIEW = "Song View";
+			$scope.LOCATION_VIEW = "Location View";
+			
+			$scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 11 };
 			
 			$scope.gotoSongView = function(songName) {
 				$scope.selectedSong = { name:songName };
@@ -20,6 +25,10 @@
 			
 			$scope.gotoLocationView = function(locationName) {
 				$scope.selectedLocation = { name:locationName };
+				$http.get('https://maps.google.com/maps/api/geocode/json?address="' + locationName + '"&sensor=false').success(function(data) {
+					var location = data.results[0].geometry.location;
+					$scope.map.center = {latitude: location.lat, longitude: location.lng};
+				});
 				$http.jsonp('https://archive.org/advancedsearch.php?q=coverage:"' + locationName + '"+AND+collection:GratefulDead&fl%5B%5D=identifier,title&rows=100000&output=json&callback=JSON_CALLBACK').success(function(data) {
 					$scope.selectedLocation.shows = data.response.docs.filter(function(d){return $scope.sampleShowIds.indexOf(d.identifier) >= 0;});
 				});

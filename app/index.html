@@ -2,7 +2,11 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+	<script src='bower_components/lodash/dist/lodash.min.js'></script>
 	<script src="bower_components/angular/angular.min.js"></script>
+	<script src='bower_components/angular-simple-logger/dist/angular-simple-logger.min.js'></script>
+	<script src='bower_components/angular-google-maps/dist/angular-google-maps.min.js'></script>
+	<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
 	<script src="scripts/app.js"></script>
 	<script src="scripts/controllers/maincontroller.js"></script>
 	<script src="scripts/services/d3.js" charset="utf-8"></script>
@@ -31,6 +35,9 @@
 		</div>
 		<div ng-if="currentView == LOCATION_VIEW">
 			<h2>{{ selectedLocation.name }}</h2>
+			<div>
+				<ui-gmap-google-map layout-align="center center" center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+			</div>
 			<div ng-repeat="s in selectedLocation.shows">
 				<a ng-href="#" ng-click="gotoShowView(s.identifier)">{{s.title}}</a>
 			</div>

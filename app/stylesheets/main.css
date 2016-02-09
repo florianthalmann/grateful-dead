@@ -38,6 +38,8 @@ button:hover {
 	background-color:#eeeeee;
 }
 
+.angular-google-map-container { height: 300px; width: 400px; text-align: center; }
+
 /**
  * Checkbox Five
  */
