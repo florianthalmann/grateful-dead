@@ -3,10 +3,8 @@
 	var fs = require("fs");
 	var express = require('express');
 	var bodyParser = require('body-parser');
-	var cors = require('cors');
 	
 	var app = express();
-	app.use(cors());
 	
 	app.use(express["static"](__dirname + '/app'));
 	app.use(bodyParser.json({limit: '50mb'}));
