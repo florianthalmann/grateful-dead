@@ -15,12 +15,14 @@
 			
 			$scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 11 };
 			
+			$scope.visualizations = [{name:"arcs"}, {name:"blocks"}, {name:"bubbles"}];
+			
 			window.AudioContext = window.AudioContext || window.webkitAudioContext;
 			var audioContext = new AudioContext();
 			$scope.scheduler = new Scheduler(audioContext);
 			$scope.viewConfig = {
 				xAxis:{name:"x-axis", param:{name:"time", min:0, max:1000}, log:false},
-				yAxis:{name:"y-axis", param:{name:"duration", min:0, max:1000}, log:false},
+				yAxis:{name:"y-axis", param:{name:"duration", min:0, max:10}, log:false},
 				size:{name:"size", param:{name:"Loudness", min:0, max:10}, log:false},
 				color:{name:"color", param:{name:"Loudness", min:0, max:10}, log:false}
 			};
@@ -28,7 +30,7 @@
 			$scope.gotoSongView = function(songName) {
 				$scope.selectedSong = { name:songName };
 				$http.jsonp('https://archive.org/advancedsearch.php?q="' + songName + '"+AND+collection:GratefulDead&fl%5B%5D=identifier,title&rows=100000&output=json&callback=JSON_CALLBACK').success(function(data) {
-					$scope.selectedSong.versions = data.response.docs.filter(function(d){return $scope.sampleShowIds.indexOf(d.identifier) >= 0;}).slice(0,100);
+					$scope.selectedSong.versions = data.response.docs.filter(function(d){return $scope.sampleShowIds.indexOf(d.identifier) >= 0;}).slice(0,10);
 					recursiveLoadDymos($scope.selectedSong.versions, 0)
 				});
 				$scope.currentView = $scope.SONG_VIEW;

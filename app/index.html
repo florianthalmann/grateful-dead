@@ -22,6 +22,8 @@
 	<script src="scripts/controllers/maincontroller.js"></script>
 	<script src="scripts/services/d3.js" charset="utf-8"></script>
 	<script src='bower_components/music-visualization/dymoarcs.js'></script>
+	<script src='bower_components/music-visualization/dymograph.js'></script>
+	<script src='bower_components/music-visualization/dymoblocks.js'></script>
 </head>
 <body ng-app="gratefulDead">
 	<div  ng-controller="MainController">
@@ -40,8 +42,11 @@
 		</div>
 		<div ng-if="currentView == SONG_VIEW">
 			<h2>{{ selectedSong.name }}</h2>
+			<select ng-init="selectedVisualization = visualizations[0]" ng-model="selectedVisualization" ng-options="v.name for v in visualizations"></select>
 			<div ng-repeat="v in selectedSong.versions">
-				<dymo-arcs data="v.dymoGraph" viewconfig="viewConfig" height="150" playing="scheduler.urisOfPlayingDymos" label="name" on-click=""></dymo-arcs>
+				<dymo-arcs ng-if="selectedVisualization == visualizations[0]" data="v.dymoGraph" viewconfig="viewConfig" height="150" playing="scheduler.urisOfPlayingDymos" label="name"></dymo-arcs>
+				<dymo-blocks ng-if="selectedVisualization == visualizations[1]" data="v.dymoGraph" viewconfig="viewConfig" height="150" playing="scheduler.urisOfPlayingDymos" label="name"></dymo-blocks>
+				<dymo-graph ng-if="selectedVisualization == visualizations[2]" data="v.dymoGraph" viewconfig="viewConfig" height="150" playing="scheduler.urisOfPlayingDymos" label="name"></dymo-graph>
 				<a ng-href="#" ng-click="gotoShowView(v.identifier)">{{v.title}}</a>
 				<!--button ng-click="play()">Play</button-->
 			</div>
