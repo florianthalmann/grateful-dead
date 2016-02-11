@@ -6,10 +6,22 @@
 	<script src="bower_components/angular/angular.min.js"></script>
 	<script src='bower_components/angular-simple-logger/dist/angular-simple-logger.min.js'></script>
 	<script src='bower_components/angular-google-maps/dist/angular-google-maps.min.js'></script>
+	<script src='bower_components/dymo-core/io/dymoloader.js'></script>
+	<script src='bower_components/dymo-core/io/globals.js'></script>
+	<script src='bower_components/dymo-core/math/functioninverter.js'></script>
+	<script src='bower_components/dymo-core/audio/scheduler.js'></script>
+	<script src='bower_components/dymo-core/logic/parameter.js'></script>
+	<script src='bower_components/dymo-core/logic/dymo.js'></script>
+	<script src='bower_components/dymo-core/logic/mapping.js'></script>
+	<script src='bower_components/dymo-core/navigators/sequential.js'></script>
+	<script src='bower_components/dymo-core/navigators/similarity.js'></script>
+	<script src='bower_components/dymo-generator/globals.js'></script>
+	<script src='bower_components/dymo-generator/dymo-generator.js'></script>
 	<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
 	<script src="scripts/app.js"></script>
 	<script src="scripts/controllers/maincontroller.js"></script>
 	<script src="scripts/services/d3.js" charset="utf-8"></script>
+	<script src='bower_components/music-visualization/dymoarcs.js'></script>
 </head>
 <body ng-app="gratefulDead">
 	<div  ng-controller="MainController">
@@ -29,6 +41,7 @@
 		<div ng-if="currentView == SONG_VIEW">
 			<h2>{{ selectedSong.name }}</h2>
 			<div ng-repeat="v in selectedSong.versions">
+				<dymo-arcs data="v.dymoGraph" viewconfig="viewConfig" height="150" playing="scheduler.urisOfPlayingDymos" label="name" on-click=""></dymo-arcs>
 				<a ng-href="#" ng-click="gotoShowView(v.identifier)">{{v.title}}</a>
 				<!--button ng-click="play()">Play</button-->
 			</div>

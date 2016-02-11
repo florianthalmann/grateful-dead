@@ -17,3 +17,5 @@ out
 **/.DS_Store
 **/node_modules
 **/bower_components
+
+app/files/dymos
