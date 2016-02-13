@@ -31,7 +31,7 @@
 		<div ng-if="currentView == SHOW_VIEW">
 			<h2>{{ selectedShow.title }}</h2>
 			<h3><a ng-href="#" ng-click="gotoLocationView(selectedShow.coverage)">{{selectedShow.coverage}}</a></h3>
-			<h3>{{ selectedShow.venue }}</h3>
+			<h3><a ng-href="#" ng-click="gotoVenueView(selectedShow.venue, selectedShow.coverage)">{{selectedShow.venue}}</a></h3>
 			<img ng-src="{{selectedShow.ticket}}" onerror="this.style.display='none'"/>
 			<img ng-src="{{selectedShow.pass}}" onerror="this.style.display='none'"/>
 			<img ng-src="{{selectedShow.poster}}" onerror="this.style.display='none'"/>
@@ -57,6 +57,15 @@
 				<ui-gmap-google-map layout-align="center center" center='map.center' zoom='map.zoom'></ui-gmap-google-map>
 			</div>
 			<div ng-repeat="s in selectedLocation.shows">
+				<a ng-href="#" ng-click="gotoShowView(s.identifier)">{{s.title}}</a>
+			</div>
+		</div>
+		<div ng-if="currentView == VENUE_VIEW">
+			<h2>{{ selectedVenue.name }}</h2>
+			<div>
+				<ui-gmap-google-map layout-align="center center" center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+			</div>
+			<div ng-repeat="s in selectedVenue.shows">
 				<a ng-href="#" ng-click="gotoShowView(s.identifier)">{{s.title}}</a>
 			</div>
 		</div>

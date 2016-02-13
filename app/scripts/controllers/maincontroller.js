@@ -12,6 +12,7 @@
 			$scope.SHOW_VIEW = "Show View";
 			$scope.SONG_VIEW = "Song View";
 			$scope.LOCATION_VIEW = "Location View";
+			$scope.VENUE_VIEW = "Venue View";
 			
 			$scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 11 };
 			
@@ -55,11 +56,25 @@
 				$http.get('https://maps.google.com/maps/api/geocode/json?address="' + locationName + '"&sensor=false').success(function(data) {
 					var location = data.results[0].geometry.location;
 					$scope.map.center = {latitude: location.lat, longitude: location.lng};
+					$scope.map.zoom = 11;
 				});
 				$http.jsonp('https://archive.org/advancedsearch.php?q=coverage:"' + locationName + '"+AND+collection:GratefulDead&fl%5B%5D=identifier,title&rows=100000&output=json&callback=JSON_CALLBACK').success(function(data) {
 					$scope.selectedLocation.shows = data.response.docs.filter(function(d){return $scope.sampleShowIds.indexOf(d.identifier) >= 0;});
 				});
 				$scope.currentView = $scope.LOCATION_VIEW;
+			}
+			
+			$scope.gotoVenueView = function(venueName, locationName) {
+				$scope.selectedVenue = { name:venueName };
+				$http.get('https://maps.google.com/maps/api/geocode/json?address="' + venueName + ', '  + locationName + '"&sensor=false').success(function(data) {
+					var location = data.results[0].geometry.location;
+					$scope.map.center = {latitude: location.lat, longitude: location.lng};
+					$scope.map.zoom = 15;
+				});
+				$http.jsonp('https://archive.org/advancedsearch.php?q=venue:"' + venueName + '"+AND+collection:GratefulDead&fl%5B%5D=identifier,title&rows=100000&output=json&callback=JSON_CALLBACK').success(function(data) {
+					$scope.selectedVenue.shows = data.response.docs.filter(function(d){return $scope.sampleShowIds.indexOf(d.identifier) >= 0;});
+				});
+				$scope.currentView = $scope.VENUE_VIEW;
 			}
 			
 			$scope.gotoShowView = function(showId) {
@@ -120,8 +135,8 @@
 				$scope.sampleSongs = data.split('\n');
 				$http.get('files/temp_ids.txt').success(function(data) {
 					$scope.sampleShowIds = data.split('\n');
-					//$scope.gotoShowView($scope.sampleShowIds[0]);
-					$scope.gotoSongView($scope.sampleSongs[0]);
+					$scope.gotoShowView($scope.sampleShowIds[0]);
+					//$scope.gotoSongView($scope.sampleSongs[0]);
 				});
 			});
 			
