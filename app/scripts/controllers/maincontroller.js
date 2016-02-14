@@ -71,8 +71,14 @@
 					$scope.map.center = {latitude: location.lat, longitude: location.lng};
 					$scope.map.zoom = 15;
 				});
+				var key = 'AIzaSyCRiXnxFJsxK_eR7UMOa6TEDG-LtNOurkE';
+				var cx = '009672749826573306698:an43qbdr-xi';
 				$http.jsonp('https://archive.org/advancedsearch.php?q=venue:"' + venueName + '"+AND+collection:GratefulDead&fl%5B%5D=identifier,title&rows=100000&output=json&callback=JSON_CALLBACK').success(function(data) {
 					$scope.selectedVenue.shows = data.response.docs.filter(function(d){return $scope.sampleShowIds.indexOf(d.identifier) >= 0;});
+				});
+				$http.get('https://www.googleapis.com/customsearch/v1?key=' + key + '&cx=' + cx + '&searchType=image&q=' + venueName + ', '  + locationName).success(function(data) {
+					var imageUris = data.items.map(function(i){return i.link;}).slice(0,3);
+					$scope.selectedVenue.images = imageUris;
 				});
 				$scope.currentView = $scope.VENUE_VIEW;
 			}

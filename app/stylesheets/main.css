@@ -30,6 +30,12 @@ button, input, select {
 	padding:5px 5px;*/
 }
 
+#navlist li
+{
+  display: inline;
+  list-style-type: none;
+}
+
 select {
 	-webkit-appearance: none;
 }
