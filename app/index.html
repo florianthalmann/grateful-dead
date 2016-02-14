@@ -27,7 +27,7 @@
 </head>
 <body ng-app="gratefulDead">
 	<div  ng-controller="MainController">
-		<h1>Grateful Dead Mockup</h1>
+		<h1>Grateful Live</h1>
 		<div ng-if="currentView == SHOW_VIEW">
 			<h2>{{ selectedShow.title }}</h2>
 			<h3><a ng-href="#" ng-click="gotoLocationView(selectedShow.coverage)">{{selectedShow.coverage}}</a></h3>
@@ -42,7 +42,7 @@
 		</div>
 		<div ng-if="currentView == SONG_VIEW">
 			<h2>{{ selectedSong.name }}</h2>
-			<select ng-init="selectedVisualization = visualizations[0]" ng-model="selectedVisualization" ng-options="v.name for v in visualizations"></select>
+			<select ng-init="selectedVisualization = visualizations[1]" ng-model="selectedVisualization" ng-options="v.name for v in visualizations"></select>
 			<div ng-repeat="v in selectedSong.versions">
 				<dymo-arcs ng-if="selectedVisualization == visualizations[0]" data="v.dymoGraph" viewconfig="viewConfig" height="150" playing="scheduler.urisOfPlayingDymos" label="name"></dymo-arcs>
 				<dymo-blocks ng-if="selectedVisualization == visualizations[1]" data="v.dymoGraph" viewconfig="viewConfig" height="150" playing="scheduler.urisOfPlayingDymos" label="name"></dymo-blocks>
@@ -53,17 +53,22 @@
 		</div>
 		<div ng-if="currentView == LOCATION_VIEW">
 			<h2>{{ selectedLocation.name }}</h2>
-			<span>
-				<ui-gmap-google-map layout-align="center center" center='map.center' zoom='map.zoom'></ui-gmap-google-map>
-			</span>
-			<span ng-repeat="s in selectedLocation.shows">
+			<div id="map_canvas">
+				<ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+				<ul id="navlist">
+					<li ng-repeat="i in selectedLocation.images">
+						<img ng-src="{{i}}" height="200" onerror="this.style.display='none'"/>
+					</li>
+				</ul>
+			</div>
+			<div ng-repeat="s in selectedLocation.shows">
 				<a ng-href="#" ng-click="gotoShowView(s.identifier)">{{s.title}}</a>
-			</span>
+			</div>
 		</div>
 		<div ng-if="currentView == VENUE_VIEW">
 			<h2>{{ selectedVenue.name }}</h2>
-			<div>
-				<ui-gmap-google-map layout-align="center center" center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+			<div id="map_canvas">
+				<ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
 				<ul id="navlist">
 					<li ng-repeat="i in selectedVenue.images">
 						<img ng-src="{{i}}" height="200" onerror="this.style.display='none'"/>

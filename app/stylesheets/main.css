@@ -3,11 +3,11 @@
 	padding: 0;
 }
 
-html, body { height: 100%; }
+html, body { height: 100%; width: 100%; }
 
 h1, h2, h3, body, button, input, select {
 	font-family: Avenir Next;
-	font-size: 16px;
+	font-size: 25px;
 	text-align: center;
 	font-weight: 300;
 	background-color: #fdfdfd;
@@ -30,6 +30,8 @@ button, input, select {
 	padding:5px 5px;*/
 }
 
+a { text-decoration:none }
+
 #navlist li
 {
   display: inline;
@@ -44,7 +46,14 @@ button:hover {
 	background-color:#eeeeee;
 }
 
-.angular-google-map-container { height: 300px; width: 400px; text-align: center; }
+#map_canvas {
+    position: relative;
+}
+
+.angular-google-map,
+.angular-google-map-container {
+  height: 200px;
+}
 
 /**
  * Checkbox Five
@@ -90,16 +99,4 @@ button:hover {
 	-o-transform: rotate(-45deg);
 	-ms-transform: rotate(-45deg);
 	transform: rotate(-45deg);
-}
-
-.xaxis path, .yaxis path,
-.xaxis line, .yaxis line {
-	fill: none;
-	stroke: black;
-	shape-rendering: crispEdges;
-}
-
-.xaxis text, .yaxis text {
-	font-family: Avenir Next;
-	font-size: 18px;
 }
