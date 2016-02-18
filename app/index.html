@@ -32,9 +32,9 @@
 			<h2>{{ selectedShow.title }}</h2>
 			<h3><a ng-href="#" ng-click="gotoLocationView(selectedShow.coverage)">{{selectedShow.coverage}}</a></h3>
 			<h3><a ng-href="#" ng-click="gotoVenueView(selectedShow.venue, selectedShow.coverage)">{{selectedShow.venue}}</a></h3>
-			<img ng-src="{{selectedShow.ticket}}" height="200" onerror="this.style.display='none'"/>
-			<img ng-src="{{selectedShow.pass}}" height="200" onerror="this.style.display='none'"/>
-			<img ng-src="{{selectedShow.poster}}" height="200" onerror="this.style.display='none'"/>
+			<img ng-src="{{selectedShow.ticket}}" height="300" onerror="this.style.display='none'"/>
+			<img ng-src="{{selectedShow.pass}}" height="300" onerror="this.style.display='none'"/>
+			<img ng-src="{{selectedShow.poster}}" height="300" onerror="this.style.display='none'"/>
 			<div ng-repeat="s in selectedShow.setlist">
 				<a ng-if="s.inSampleSongs" ng-href="#" ng-click="gotoSongView(s.plainTitle)">{{s.title}}</a>
 				<a ng-if="!s.inSampleSongs">{{s.title}}</a>

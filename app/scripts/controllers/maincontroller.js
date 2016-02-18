@@ -157,7 +157,7 @@
 				$scope.sampleSongs = data.split('\n');
 				$http.get('files/temp_ids.txt').success(function(data) {
 					$scope.sampleShowIds = data.split('\n');
-					$scope.gotoShowView($scope.sampleShowIds[0]);
+					$scope.gotoShowView($scope.sampleShowIds[14]);
 					//$scope.gotoSongView($scope.sampleSongs[0]);
 				});
 			});
