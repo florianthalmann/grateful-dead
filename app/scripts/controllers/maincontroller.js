@@ -68,7 +68,7 @@
 			$scope.gotoShowView = function(showId) {
 				$scope.selectedShowID = showId;
 				$http.jsonp('https://archive.org/advancedsearch.php?q=collection:GratefulDead+AND+identifier:' + $scope.selectedShowID + '&fl%5B%5D=title,date,coverage,venue&output=json&callback=JSON_CALLBACK').success(function(data) {
-					$scope.selectedShow = data.response.docs[0];
+					$scope.selectedShow = data.response.docs[0]; console.log($scope.selectedShow);
 					var shortDate = getShortYearDateString($scope.selectedShow.date);
 					$scope.selectedShow.ticket = 'http://www.psilo.com/dead/images/tickets/t' + shortDate + '.jpg';
 					$scope.selectedShow.pass = 'http://www.psilo.com/dead/images/passes/b' + shortDate + '.jpg';
@@ -77,7 +77,17 @@
 						$scope.selectedShow.setlist = extractSetlist(data);
 						$scope.currentView = $scope.SHOW_VIEW;
 					});
+					
+					$http.jsonp('https://archive.org/advancedsearch.php?q=collection:GratefulDead+AND+date:' + $scope.selectedShow.date + '&fl%5B%5D=identifier,title&rows=100000&output=json&callback=JSON_CALLBACK').success(function(data) {
+						$scope.selectedShow.recordings = data.response.docs ;
+						
+
+					});
+
 				});
+				
+				
+				
 			}
 			
 			function getShortYearDateString(date) {
@@ -126,12 +136,21 @@
 					if (currentFile.track && currentFile.source) {
 						var currentSong = { title:currentFile.title };
 						currentSong.inSampleSongs = false;
+						currentSong.inSampleSongs2 = false;
 						for (var j = 0, m = $scope.sampleSongs.length; j < m; j++) {
 							if (currentSong.title.indexOf($scope.sampleSongs[j]) >= 0) {
 								currentSong.inSampleSongs = true;
 								currentSong.plainTitle = $scope.sampleSongs[j];
 							}
 						}
+						
+						for (var j = 0, m = $scope.sampleSongs2.length; j < m; j++) {
+							if (currentSong.title.indexOf($scope.sampleSongs2[j]) >= 0) {
+								currentSong.inSampleSongs2 = true;
+								currentSong.plainTitle = $scope.sampleSongs2[j];
+							}
+						}
+						
 						setlist[Number.parseInt(currentFile.track)] = currentSong;
 					}
 				}
@@ -157,10 +176,19 @@
 				$scope.sampleSongs = data.split('\n');
 				$http.get('files/temp_ids.txt').success(function(data) {
 					$scope.sampleShowIds = data.split('\n');
-					$scope.gotoShowView($scope.sampleShowIds[14]);
+					
+					$http.get('files/temp_songs_2.txt').success(function(data) {
+						$scope.sampleSongs2 = data.split('\n');
+						
+						$scope.gotoShowView($scope.sampleShowIds[474]);
+					
+					});
 					//$scope.gotoSongView($scope.sampleSongs[0]);
 				});
 			});
+			
+			
+			
 			
 		}]);
 
