@@ -41,6 +41,15 @@
 				$scope.currentView = $scope.SONG_VIEW;
 			}
 			
+			$scope.gotoSongVersionView = function(songName, showTitle) {
+				$scope.selectedSong = { name:songName };
+				/*$http.jsonp('https://archive.org/advancedsearch.php?q="' + songName + '"+AND+collection:GratefulDead&fl%5B%5D=identifier,title&rows=100000&output=json&callback=JSON_CALLBACK').success(function(data) {
+					$scope.selectedSong.versions = data.response.docs.filter(function(d){return $scope.sampleShowIds.indexOf(d.identifier) >= 0;}).slice(0,10);
+					recursiveLoadDymos($scope.selectedSong.versions, 0);
+				});*/
+				$scope.currentView = $scope.SONG_VERSION_VIEW;
+			}
+			
 			$scope.gotoLocationView = function(locationName) {
 				$scope.selectedLocation = { name:locationName };
 				updateMap(locationName, 11);
@@ -181,6 +190,7 @@
 						$scope.sampleSongs2 = data.split('\n');
 						
 						$scope.gotoShowView($scope.sampleShowIds[474]);
+						//$scope.gotoSongVersionView("Looks Like Rain");
 					
 					});
 					//$scope.gotoSongView($scope.sampleSongs[0]);
