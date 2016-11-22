@@ -8,16 +8,16 @@
 			});
 		}])
 		.controller('MainController', ['$scope', '$http', function($scope, $http) {
-			
+
 			$scope.SHOW_VIEW = "Show View";
 			$scope.SONG_VIEW = "Song View";
 			$scope.LOCATION_VIEW = "Location View";
 			$scope.VENUE_VIEW = "Venue View";
 			$scope.BS_VIEW = "BS View";
 			$scope.WELCOME_VIEW = "Welcome View";
-			
+
 			$scope.visualizations = [{name:"arcs"}, {name:"blocks"}, {name:"bubbles"}];
-			
+
 			$scope.range = function(min, max, step) {
 			    step = step || 1;
 			    var input = [];
@@ -26,13 +26,13 @@
 			    }
 			    return input;
 			};
-			
-			
-			
+
+
+
 			$scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 11 };
 			var API_KEY = 'AIzaSyCRiXnxFJsxK_eR7UMOa6TEDG-LtNOurkE';
 			var SEARCH_ID = '009672749826573306698:an43qbdr-xi';
-			
+
 			window.AudioContext = window.AudioContext || window.webkitAudioContext;
 			var audioContext = new AudioContext();
 			$scope.scheduler = new Scheduler(audioContext);
@@ -42,7 +42,7 @@
 				size:{name:"size", param:{name:"Loudness", min:0, max:10}, log:false},
 				color:{name:"color", param:{name:"Spectral Standard Deviation", min:0, max:5000}, log:false}
 			};
-			
+
 			$scope.gotoSongView = function(songName) {
 				$scope.selectedSong = { name:songName };
 				$http.jsonp('https://archive.org/advancedsearch.php?q="' + songName + '"+AND+collection:GratefulDead&fl%5B%5D=identifier,title&rows=100000&output=json&callback=JSON_CALLBACK').success(function(data) {
@@ -53,7 +53,16 @@
 				recursiveLoadDymos($scope.selectedSong.versions, 0);*/
 				$scope.currentView = $scope.SONG_VIEW;
 			}
-			
+
+			$scope.gotoSongVersionView = function(songName, showTitle) {
+				$scope.selectedSong = { name:songName };
+				/*$http.jsonp('https://archive.org/advancedsearch.php?q="' + songName + '"+AND+collection:GratefulDead&fl%5B%5D=identifier,title&rows=100000&output=json&callback=JSON_CALLBACK').success(function(data) {
+					$scope.selectedSong.versions = data.response.docs.filter(function(d){return $scope.sampleShowIds.indexOf(d.identifier) >= 0;}).slice(0,10);
+					recursiveLoadDymos($scope.selectedSong.versions, 0);
+				});*/
+				$scope.currentView = $scope.SONG_VERSION_VIEW;
+			}
+
 			$scope.gotoLocationView = function(locationName) {
 				$scope.selectedLocation = { name:locationName };
 				updateMap(locationName, 11);
@@ -65,7 +74,7 @@
 				});
 				$scope.currentView = $scope.LOCATION_VIEW;
 			}
-			
+
 			$scope.gotoVenueView = function(venueName, locationName) {
 				$scope.selectedVenue = { name:venueName };
 				updateMap(venueName + ', '  + locationName, 15);
@@ -77,7 +86,7 @@
 				});
 				$scope.currentView = $scope.VENUE_VIEW;
 			}
-			
+
 			$scope.gotoShowView = function(showId) {
 				$scope.selectedShowID = showId;
 				$http.jsonp('https://archive.org/advancedsearch.php?q=collection:GratefulDead+AND+identifier:' + $scope.selectedShowID + '&fl%5B%5D=title,date,coverage,venue&output=json&callback=JSON_CALLBACK').success(function(data) {
@@ -90,34 +99,34 @@
 						$scope.selectedShow.setlist = extractSetlist(data);
 						$scope.currentView = $scope.SHOW_VIEW;
 					});
-					
+
 					$http.jsonp('https://archive.org/advancedsearch.php?q=collection:GratefulDead+AND+date:' + $scope.selectedShow.date + '&fl%5B%5D=identifier,title&rows=100000&output=json&callback=JSON_CALLBACK').success(function(data) {
 						$scope.selectedShow.recordings = data.response.docs ;
 					});
 				});
 			}
-			
+
 			$scope.gotoWelcomeView = function() {
-				
+
 				$scope.currentView = $scope.WELCOME_VIEW;
 			}
-			
+
 			//______________________________________
-			
-			
-			
+
+
+
 			$scope.enterSite = function() {
 				$http.get('files/temp_songs.txt').success(function(data) {
 					$scope.sampleSongs = data.split('\n');
 					$http.get('files/temp_ids.txt').success(function(data) {
 						$scope.sampleShowIds = data.split('\n');
-					
+
 						$http.get('files/temp_songs_2.txt').success(function(data) {
 							$scope.sampleSongs2 = data.split('\n');
-						
+
 							$scope.gotoShowView($scope.sampleShowIds[474]);
-							
-					
+
+
 						});
 						//$scope.gotoSongView($scope.sampleSongs[0]);
 					});
@@ -128,17 +137,17 @@
 				/* var q = "PREFIX lma: <http://example.com/lma/vocab/> \
 						 SELECT ?id \
 						 WHERE { ?x lma:etree_concert ?id }";
-				
+
 				testQuery(q, function(r){
-					$scope.bs = r.results.bindings; 
+					$scope.bs = r.results.bindings;
 					$scope.$apply();
 
 				});	*/
 				$scope.currentView = $scope.BS_VIEW;
 			}
-			
-	
-			
+
+
+
 			$scope.queryButton = function(y, m, d) {
 				//console.log(d)
 				//d = "1982-10-10"
@@ -165,17 +174,17 @@
 				FILTER NOT EXISTS { ?sigtime a lma:ReferenceTimeLine }\
 			  } \
 			  ORDER BY ASC(?id)".replace(/VAR0/g, y).replace(/VAR1/g, m).replace(/VAR2/g, d);
-				
+
 				testQuery(q, function(r){
-					
+
 					/*
-					for (var i=0, item; item = r.results.bindings[i]; i++) { 
+					for (var i=0, item; item = r.results.bindings[i]; i++) {
 						var id = item.id.value;
 						var file = item.file.value;
-						var start = item.start.value;     
-						var end = item.end.value;  
-						var dur = item.dur.value;   
-						
+						var start = item.start.value;
+						var end = item.end.value;
+						var dur = item.dur.value;
+
 						if (!(id in dict)) {
 							dict[id] = [];
 						}
@@ -183,21 +192,21 @@
 					}
 					*/
 
-					
-					
-					
-					//$scope.bs = r.results.bindings; 
+
+
+
+					//$scope.bs = r.results.bindings;
 					//$scope.bsdict = dict;
 					$scope.bsdict = r.results;
 					$scope.$apply();
-					
-				});	
+
+				});
 				//$scope.currentView = $scope.BS_VIEW;
 			}
 
-			
+
 			function testQuery(q, callback) {
-				
+
 				var endpoint = "http://127.0.0.1:3030/gd_match_0.999/query?query=";
 				var query = encodeURIComponent(q);
 				var u = endpoint + query;
@@ -206,35 +215,35 @@
 				fetch(u)
 					.then(r=>r.json())
 					.then(j=>callback(j));
-				
+
 				/*
-			
+
 				fetch(u)
-				.then(function(r) { 
+				.then(function(r) {
 					return r.json()
 				})
 				.then(function(j) {
 					callback(j)
 				}) ;
-				
+
 				*/
 			}
-	
-			
-			
-			
+
+
+
+
 			//______________________________________
 
 			function getShortYearDateString(date) {
 				date = new Date(date);
 				return '' + date.getYear() + ('0' + (date.getMonth()+1)).slice(-2) + ('0' + date.getUTCDate()).slice(-2);
 			}
-			
+
 			function getFullYearDateString(date) {
 				date = new Date(date);
-				return 
+				return
 			}
-			
+
 			function getPosterUris(date) {
 				date = new Date(date);
 				var longDate = '' + date.getFullYear() + ('0' + (date.getMonth()+1)).slice(-2) + ('0' + date.getUTCDate()).slice(-2);
@@ -243,7 +252,7 @@
 					console.log(data)
 				});
 			}
-			
+
 			function updateMap(searchQuery, zoomLevel) {
 				$http.get('https://maps.google.com/maps/api/geocode/json?address="' + searchQuery + '"&sensor=false').success(function(data) {
 					var location = data.results[0].geometry.location;
@@ -251,19 +260,19 @@
 					$scope.map.zoom = zoomLevel;
 				});
 			}
-			
+
 			function getShows(field, value, callback) {
 				$http.jsonp('https://archive.org/advancedsearch.php?q=' + field + ':"' + value + '"+AND+collection:GratefulDead&fl%5B%5D=identifier,title&rows=100000&output=json&callback=JSON_CALLBACK').success(function(data) {
 					callback(data.response.docs.filter(function(d){return $scope.sampleShowIds.indexOf(d.identifier) >= 0;}));
 				});
 			}
-			
+
 			function getImages(searchQuery, callback) {
 				$http.get('https://www.googleapis.com/customsearch/v1?key=' + API_KEY + '&cx=' + SEARCH_ID + '&searchType=image&q=' + searchQuery).success(function(data) {
 					callback(data.items.map(function(i){return i.link;}).slice(0,3));
 				});
 			}
-			
+
 			function extractSetlist(metadata) {
 				var setlist = [];
 				for (var i = 0, l = metadata.files.length; i < l; i++) {
@@ -278,20 +287,20 @@
 								currentSong.plainTitle = $scope.sampleSongs[j];
 							}
 						}
-						
+
 						for (var j = 0, m = $scope.sampleSongs2.length; j < m; j++) {
 							if (currentSong.title.indexOf($scope.sampleSongs2[j]) >= 0) {
 								currentSong.inSampleSongs2 = true;
 								currentSong.plainTitle = $scope.sampleSongs2[j];
 							}
 						}
-						
+
 						setlist[Number.parseInt(currentFile.track)] = currentSong;
 					}
 				}
 				return setlist;
 			}
-			
+
 			function recursiveLoadDymos(versions, i) {
 				if (i < versions.length) {
 					var currentVersionId = $scope.selectedSong.versions[i].identifier;
@@ -305,18 +314,18 @@
 					}, $http);
 				}
 			}
-			
-			
-			
-			
+
+
+
+
 			$scope.gotoWelcomeView()
-			
+
 			//INIT
 			
-			
-		
-			
-			
+
+
+
+
 		}]);
 
 }());
