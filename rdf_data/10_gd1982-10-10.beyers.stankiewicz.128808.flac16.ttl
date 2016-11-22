@@ -1,0 +1,225 @@
+@prefix : <http://example.com/lma/data/> .
+@prefix etree: <http://etree.linkedmusic.org/vocab/> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lma: <http://example.com/lma/vocab/> .
+@prefix mo: <http://purl.org/ontology/mo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tl: <http://purl.org/NET/c4dm/timeline.owl#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://archive.org/download/gd1982-10-10.beyers.stankiewicz.128808.flac16/gd1982-10-10s1t02.flac> mo:encodes :c535c67579644332bea2e4d1e46ad88a .
+
+<http://archive.org/download/gd1982-10-10.beyers.stankiewicz.128808.flac16/gd1982-10-10s1t03.flac> mo:encodes :d481bfd1cdd644708a15be0bbf2e9f82 .
+
+<http://archive.org/download/gd1982-10-10.beyers.stankiewicz.128808.flac16/gd1982-10-10s1t04.flac> mo:encodes :ab48eaccaeeb41a593a8c875816cdb33 .
+
+<http://archive.org/download/gd1982-10-10.beyers.stankiewicz.128808.flac16/gd1982-10-10s1t05.flac> mo:encodes :a59a14f622504269b72f6d9d90785879 .
+
+<http://archive.org/download/gd1982-10-10.beyers.stankiewicz.128808.flac16/gd1982-10-10s1t06.flac> mo:encodes :b1e9e2b3e90c4b6a8598f71932361a96 .
+
+<http://archive.org/download/gd1982-10-10.beyers.stankiewicz.128808.flac16/gd1982-10-10s1t07.flac> mo:encodes :e3d8e133ea2641f6b982ab1f14e46680 .
+
+<http://archive.org/download/gd1982-10-10.beyers.stankiewicz.128808.flac16/gd1982-10-10s1t08.flac> mo:encodes :d4d4c3b6a0e74096af6c55a449f5c52a .
+
+<http://archive.org/download/gd1982-10-10.beyers.stankiewicz.128808.flac16/gd1982-10-10s1t09.flac> mo:encodes :f42627d71d7b4e7c908fe57b117baf36 .
+
+<http://archive.org/download/gd1982-10-10.beyers.stankiewicz.128808.flac16/gd1982-10-10s1t10.flac> mo:encodes :f30aeac183c3440a972317837d6c27b4 .
+
+<http://archive.org/download/gd1982-10-10.beyers.stankiewicz.128808.flac16/gd1982-10-10s1t11.flac> mo:encodes :c21754a02c0942b9968cdff34705b568 .
+
+<http://archive.org/download/gd1982-10-10.beyers.stankiewicz.128808.flac16/gd1982-10-10s2t02.flac> mo:encodes :aaa06081c9a54c9ba931d4ccbf5454bb .
+
+<http://archive.org/download/gd1982-10-10.beyers.stankiewicz.128808.flac16/gd1982-10-10s2t03.flac> mo:encodes :ccc00a6f364c4197ba7d0724afc1f023 .
+
+<http://archive.org/download/gd1982-10-10.beyers.stankiewicz.128808.flac16/gd1982-10-10s2t04.flac> mo:encodes :dcf5ecb227fb4e2788974c30f7611b84 .
+
+<http://archive.org/download/gd1982-10-10.beyers.stankiewicz.128808.flac16/gd1982-10-10s2t05.flac> mo:encodes :b7a875b843b64d4d9bf634f6c8af6f5f .
+
+<http://archive.org/download/gd1982-10-10.beyers.stankiewicz.128808.flac16/gd1982-10-10s2t06.flac> mo:encodes :b9e21cd283164aa0b3bdb641178164bf .
+
+<http://archive.org/download/gd1982-10-10.beyers.stankiewicz.128808.flac16/gd1982-10-10s2t07.flac> mo:encodes :ac03817432674dae8092ef41b6d4a404 .
+
+<http://archive.org/download/gd1982-10-10.beyers.stankiewicz.128808.flac16/gd1982-10-10s2t08.flac> mo:encodes :c7f5bd5fe94f41e0a9c218de3d5372f9 .
+
+<http://archive.org/download/gd1982-10-10.beyers.stankiewicz.128808.flac16/gd1982-10-10s2t10.flac> mo:encodes :f2c3b766d8d348f9a5e2564f1a422932 .
+
+<http://archive.org/download/gd1982-10-10.beyers.stankiewicz.128808.flac16/gd1982-10-10s2t11.flac> mo:encodes :c7463a9b0fa0439b8e274c30e450ade3 .
+
+<http://archive.org/download/gd1982-10-10.beyers.stankiewicz.128808.flac16/gd1982-10-10s2t12.flac> mo:encodes :f3227a92de2d4e1da5304c56153671a7 .
+
+<http://archive.org/download/gd1982-10-10.beyers.stankiewicz.128808.flac16/gd1982-10-10s2t14.flac> mo:encodes :caa65390b231439d886a284d50d7a174 .
+
+<http://archive.org/download/gd1982-10-10.beyers.stankiewicz.128808.flac16/gd1982-10-10s2t15.flac> mo:encodes :db43e2b59bd94212bfb9de74d53218ef .
+
+:afe4e7d3f80c40d4aaff187dfe9e4ea9 event:hasSubEvent [ mo:produced_sound [ mo:recorded_in :f385ba3b146f487a8ab04143480e39e0 ] ] .
+
+:a59a14f622504269b72f6d9d90785879 lma:segment_of _:N4af9aaea442847c88366261edc8469a9 ;
+    mo:time [ tl:end "2224.7353766" ;
+            tl:start "1601.0020436" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "596.586667"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:aaa06081c9a54c9ba931d4ccbf5454bb lma:segment_of _:N4af9aaea442847c88366261edc8469a9 ;
+    mo:time [ tl:end "5235.58006483" ;
+            tl:start "4806.23339783" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "427.626667"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:ab48eaccaeeb41a593a8c875816cdb33 lma:segment_of _:N4af9aaea442847c88366261edc8469a9 ;
+    mo:time [ tl:duration "494.933333"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "1602.60813365" ;
+            tl:start "1081.63480065" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:ac03817432674dae8092ef41b6d4a404 lma:segment_of _:N4af9aaea442847c88366261edc8469a9 ;
+    mo:time [ tl:end "7685.23210663" ;
+            tl:start "7201.01877363" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "484.96"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:b1e9e2b3e90c4b6a8598f71932361a96 lma:segment_of _:N4af9aaea442847c88366261edc8469a9 ;
+    mo:time [ tl:end "2634.93149357" ;
+            tl:start "2245.70482657" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "383.226667"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:b7a875b843b64d4d9bf634f6c8af6f5f lma:segment_of _:N4af9aaea442847c88366261edc8469a9 ;
+    mo:time [ tl:duration "420.266667"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "6773.59624327" ;
+            tl:start "6351.52957627" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:b9e21cd283164aa0b3bdb641178164bf lma:segment_of _:N4af9aaea442847c88366261edc8469a9 ;
+    mo:time [ tl:end "7213.27077903" ;
+            tl:start "6773.79077903" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "437.013333"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:c21754a02c0942b9968cdff34705b568 lma:segment_of _:N4af9aaea442847c88366261edc8469a9 ;
+    mo:time [ tl:end "4641.42920122" ;
+            tl:start "4269.44253422" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "397.333333"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:c535c67579644332bea2e4d1e46ad88a lma:segment_of _:N4af9aaea442847c88366261edc8469a9 ;
+    mo:time [ tl:duration "444.36"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "494.073881282" ;
+            tl:start "49.8472142821" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:c7463a9b0fa0439b8e274c30e450ade3 lma:segment_of _:N4af9aaea442847c88366261edc8469a9 ;
+    mo:time [ tl:duration "277.653333"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "9168.37048903" ;
+            tl:start "8884.97048903" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:c7f5bd5fe94f41e0a9c218de3d5372f9 lma:segment_of _:N4af9aaea442847c88366261edc8469a9 ;
+    mo:time [ tl:end "8050.99361983" ;
+            tl:start "7640.38028683" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "363.066667"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:caa65390b231439d886a284d50d7a174 lma:segment_of _:N4af9aaea442847c88366261edc8469a9 ;
+    mo:time [ tl:end "10791.582833" ;
+            tl:start "10410.5295" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "388.973333"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:ccc00a6f364c4197ba7d0724afc1f023 lma:segment_of _:N4af9aaea442847c88366261edc8469a9 ;
+    mo:time [ tl:duration "655.76"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "5894.86928266" ;
+            tl:start "5216.05594966" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:d481bfd1cdd644708a15be0bbf2e9f82 lma:segment_of _:N4af9aaea442847c88366261edc8469a9 ;
+    mo:time [ tl:duration "612.906667"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "1107.37208202" ;
+            tl:start "494.03874902" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:d4d4c3b6a0e74096af6c55a449f5c52a lma:segment_of _:N4af9aaea442847c88366261edc8469a9 ;
+    mo:time [ tl:duration "253.413333"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "3354.06214948" ;
+            tl:start "3097.66214948" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:db43e2b59bd94212bfb9de74d53218ef lma:segment_of _:N4af9aaea442847c88366261edc8469a9 ;
+    mo:time [ tl:duration "410.226667"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "11201.6274528" ;
+            tl:start "10792.8407858" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:dcf5ecb227fb4e2788974c30f7611b84 lma:segment_of _:N4af9aaea442847c88366261edc8469a9 ;
+    mo:time [ tl:end "6350.78673335" ;
+            tl:start "5914.60006635" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "453.333333"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:e3d8e133ea2641f6b982ab1f14e46680 lma:segment_of _:N4af9aaea442847c88366261edc8469a9 ;
+    mo:time [ tl:end "3086.84312043" ;
+            tl:start "2627.29645343" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "446.16"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:f2c3b766d8d348f9a5e2564f1a422932 lma:segment_of _:N4af9aaea442847c88366261edc8469a9 ;
+    mo:time [ tl:duration "465.706667"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "8889.6015263" ;
+            tl:start "8447.5615263" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:f30aeac183c3440a972317837d6c27b4 lma:segment_of _:N4af9aaea442847c88366261edc8469a9 ;
+    mo:time [ tl:end "4243.62220333" ;
+            tl:start "3878.91553633" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "350.093333"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:f3227a92de2d4e1da5304c56153671a7 lma:segment_of _:N4af9aaea442847c88366261edc8469a9 ;
+    mo:time [ tl:duration "494.053333"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "9664.70272481" ;
+            tl:start "9171.16939181" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:f385ba3b146f487a8ab04143480e39e0 mo:produced_signal _:Ne82c9102458a430fbaa53c4f08dc1334 ;
+    prov:wasAssociatedWith [ prov:hadRole lma:Taper ;
+            foaf:name "Richie Stankiewicz"^^xsd:string ] .
+
+:f42627d71d7b4e7c908fe57b117baf36 lma:segment_of _:N4af9aaea442847c88366261edc8469a9 ;
+    mo:time [ tl:end "3893.21809686" ;
+            tl:start "3358.96476386" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "538.626667"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+_:N025432d5180143cf92aadee65da937cd prov:used _:Ne82c9102458a430fbaa53c4f08dc1334 ;
+    prov:wasAssociatedWith [ prov:hadRole lma:Transferer ;
+            foaf:name "Richie Stankiewicz, Andrew F"^^xsd:string ] .
+
+_:Ne82c9102458a430fbaa53c4f08dc1334 mo:sampled_version _:N4af9aaea442847c88366261edc8469a9 .
+
+_:N4af9aaea442847c88366261edc8469a9 prov:wasGeneratedBy _:N025432d5180143cf92aadee65da937cd .
+

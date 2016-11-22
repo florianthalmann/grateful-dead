@@ -1,0 +1,342 @@
+@prefix : <http://example.com/lma/data/> .
+@prefix etree: <http://etree.linkedmusic.org/vocab/> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lma: <http://example.com/lma/vocab/> .
+@prefix mo: <http://purl.org/ontology/mo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tl: <http://purl.org/NET/c4dm/timeline.owl#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://etree.linkedmusic.org/performance/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16> event:hasSubEvent <http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-1>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-10>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-11>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-12>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-13>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-14>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-15>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-16>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-17>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-18>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-19>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-2>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-20>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-21>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-22>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-23>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-24>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-25>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-26>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-3>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-4>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-5>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-6>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-7>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-8>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-9> .
+
+:afe4e7d3f80c40d4aaff187dfe9e4ea9 event:hasSubEvent [ mo:produced_sound [ mo:recorded_in :e40ea61374454fc7809d2f4908025b0e ] ] .
+
+<http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d1t01.flac> mo:encodes :e62d5829b9c64c8fbc0baf1103a453fb .
+
+<http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d1t02.flac> mo:encodes :fab007bdf4084c4bbf26fbf4b2fb53c2 .
+
+<http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d1t03.flac> mo:encodes :b06473f576364cd4aff76320ba9e46af .
+
+<http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d1t04.flac> mo:encodes :f3a9920c4cf5429f81d43f5059fbc0ec .
+
+<http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d1t05.flac> mo:encodes :b70f9cc95efd44a1987909664344a3e9 .
+
+<http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d1t06.flac> mo:encodes :f351dc18c9b9403e8ef9bdaf8bc4cdfc .
+
+<http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d1t07.flac> mo:encodes :e79ba41e72244be391f99220dac13d7d .
+
+<http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d1t08.flac> mo:encodes :e73107c37afb4821bae6d17c449d7a50 .
+
+<http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d1t09.flac> mo:encodes :a02823de8ebb4ba7ad147264bef99a38 .
+
+<http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d1t10.flac> mo:encodes :f0f849aa2e744c6a97b3cdfe52063ece .
+
+<http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d1t11.flac> mo:encodes :f5195406bf34465fa426e80f6d2d1412 .
+
+<http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d2t01.flac> mo:encodes :b6ce77d6d86246d1bfc9d4e65cd901e9 .
+
+<http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d2t02.flac> mo:encodes :c89c14483d3541469c1d129f730ff8dc .
+
+<http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d2t03.flac> mo:encodes :fd19b50c347d445ba819cee5c0a898bc .
+
+<http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d2t04.flac> mo:encodes :ee102d62e15943fdb3479045660555b8 .
+
+<http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d2t05.flac> mo:encodes :be62e11c807d4b78a0fa462dc3be2535 .
+
+<http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d2t06.flac> mo:encodes :dd07abbaed7e4f059b655c7d1cff8687 .
+
+<http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d2t07.flac> mo:encodes :f2208cb02aa24b34a64c3ba741c31ea6 .
+
+<http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d3t01.flac> mo:encodes :cd6b1a8f65e844a88acde9739700e920 .
+
+<http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d3t02.flac> mo:encodes :f4eee33746704ae2a65bb430b8df62fc .
+
+<http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d3t03.flac> mo:encodes :fd095ca946be407c88f06ea426d65f35 .
+
+<http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d3t04.flac> mo:encodes :b82e4336d17a45949bb9f81fe9e02777 .
+
+<http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d3t05.flac> mo:encodes :d95efeca988d49e08ea432a1d2865ebc .
+
+<http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d3t06.flac> mo:encodes :c84b2a2810d646488ec29289499d42f0 .
+
+<http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d3t07.flac> mo:encodes :f1a8674d27ae4efa8b0d9c088ca94bc8 .
+
+<http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d3t08.flac> mo:encodes :edc935bd14884ec790c911c60c75e195 .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-1> etree:audio <http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d1t01.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-10> etree:audio <http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d1t10.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-11> etree:audio <http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d1t11.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-12> etree:audio <http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d2t01.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-13> etree:audio <http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d2t02.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-14> etree:audio <http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d2t03.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-15> etree:audio <http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d2t04.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-16> etree:audio <http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d2t05.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-17> etree:audio <http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d2t06.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-18> etree:audio <http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d2t07.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-19> etree:audio <http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d3t01.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-2> etree:audio <http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d1t02.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-20> etree:audio <http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d3t02.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-21> etree:audio <http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d3t03.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-22> etree:audio <http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d3t04.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-23> etree:audio <http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d3t05.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-24> etree:audio <http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d3t06.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-25> etree:audio <http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d3t07.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-26> etree:audio <http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d3t08.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-3> etree:audio <http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d1t03.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-4> etree:audio <http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d1t04.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-5> etree:audio <http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d1t05.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-6> etree:audio <http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d1t06.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-7> etree:audio <http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d1t07.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-8> etree:audio <http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d1t08.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16-9> etree:audio <http://archive.org/download/gd1982-10-10.nak700.anon-poris.LMPP.95682.flac16/gd82-10-10d1t09.flac> .
+
+:a02823de8ebb4ba7ad147264bef99a38 lma:segment_of _:Naaa4acb71f344b699e2c329555d76b49 ;
+    mo:time [ tl:duration "534.253333"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "3891.653333" ;
+            tl:start "3357.4" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:b06473f576364cd4aff76320ba9e46af lma:segment_of _:Naaa4acb71f344b699e2c329555d76b49 ;
+    mo:time [ tl:end "1107.52" ;
+            tl:start "494.186667" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "613.333333"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:b6ce77d6d86246d1bfc9d4e65cd901e9 lma:segment_of _:Naaa4acb71f344b699e2c329555d76b49 ;
+    mo:time [ tl:duration "178.853333"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "4807.2" ;
+            tl:start "4628.346667" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:b70f9cc95efd44a1987909664344a3e9 lma:segment_of _:Naaa4acb71f344b699e2c329555d76b49 ;
+    mo:time [ tl:end "2252.226666" ;
+            tl:start "1628.493333" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "623.733333"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:b82e4336d17a45949bb9f81fe9e02777 lma:segment_of _:Naaa4acb71f344b699e2c329555d76b49 ;
+    mo:time [ tl:end "9173.08" ;
+            tl:start "8889.68" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "283.4"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:be62e11c807d4b78a0fa462dc3be2535 lma:segment_of _:Naaa4acb71f344b699e2c329555d76b49 ;
+    mo:time [ tl:duration "422.066667"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "6773.613334" ;
+            tl:start "6351.546667" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:c84b2a2810d646488ec29289499d42f0 lma:segment_of _:Naaa4acb71f344b699e2c329555d76b49 ;
+    mo:time [ tl:end "10411.6" ;
+            tl:start "9666.613333" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "744.986667"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:c89c14483d3541469c1d129f730ff8dc lma:segment_of _:Naaa4acb71f344b699e2c329555d76b49 ;
+    mo:time [ tl:duration "429.346667"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "5236.546667" ;
+            tl:start "4807.2" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:cd6b1a8f65e844a88acde9739700e920 lma:segment_of _:Naaa4acb71f344b699e2c329555d76b49 ;
+    mo:time [ tl:duration "410.613333"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "8107.92" ;
+            tl:start "7697.306667" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:d95efeca988d49e08ea432a1d2865ebc lma:segment_of _:Naaa4acb71f344b699e2c329555d76b49 ;
+    mo:time [ tl:end "9666.613333" ;
+            tl:start "9173.08" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "493.533333"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:dd07abbaed7e4f059b655c7d1cff8687 lma:segment_of _:Naaa4acb71f344b699e2c329555d76b49 ;
+    mo:time [ tl:end "7213.093334" ;
+            tl:start "6773.613334" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "439.48"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:e40ea61374454fc7809d2f4908025b0e mo:produced_signal _:N9c5438bdf4784932b9a0587fa0d9045f ;
+    prov:wasAssociatedWith [ prov:hadRole lma:Taper ;
+            foaf:name "anonymous taper and Jamie Poris"^^xsd:string ] .
+
+:e62d5829b9c64c8fbc0baf1103a453fb lma:segment_of _:Naaa4acb71f344b699e2c329555d76b49 ;
+    mo:time [ tl:duration "49.96"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "49.96" ;
+            tl:start "0" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:e73107c37afb4821bae6d17c449d7a50 lma:segment_of _:Naaa4acb71f344b699e2c329555d76b49 ;
+    mo:time [ tl:duration "256.4"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "3357.4" ;
+            tl:start "3101.0" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:e79ba41e72244be391f99220dac13d7d lma:segment_of _:Naaa4acb71f344b699e2c329555d76b49 ;
+    mo:time [ tl:end "3101.0" ;
+            tl:start "2641.453333" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "459.546667"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:edc935bd14884ec790c911c60c75e195 lma:segment_of _:Naaa4acb71f344b699e2c329555d76b49 ;
+    mo:time [ tl:end "11201.44" ;
+            tl:start "10792.653333" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "408.786667"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:ee102d62e15943fdb3479045660555b8 lma:segment_of _:Naaa4acb71f344b699e2c329555d76b49 ;
+    mo:time [ tl:end "6351.546667" ;
+            tl:start "5915.36" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "436.186667"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:f0f849aa2e744c6a97b3cdfe52063ece lma:segment_of _:Naaa4acb71f344b699e2c329555d76b49 ;
+    mo:time [ tl:end "4256.36" ;
+            tl:start "3891.653333" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "364.706667"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:f1a8674d27ae4efa8b0d9c088ca94bc8 lma:segment_of _:Naaa4acb71f344b699e2c329555d76b49 ;
+    mo:time [ tl:duration "381.053333"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "10792.653333" ;
+            tl:start "10411.6" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:f2208cb02aa24b34a64c3ba741c31ea6 lma:segment_of _:Naaa4acb71f344b699e2c329555d76b49 ;
+    mo:time [ tl:duration "484.213333"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "7697.306667" ;
+            tl:start "7213.093334" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:f351dc18c9b9403e8ef9bdaf8bc4cdfc lma:segment_of _:Naaa4acb71f344b699e2c329555d76b49 ;
+    mo:time [ tl:end "2641.453333" ;
+            tl:start "2252.226666" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "389.226667"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:f3a9920c4cf5429f81d43f5059fbc0ec lma:segment_of _:Naaa4acb71f344b699e2c329555d76b49 ;
+    mo:time [ tl:end "1628.493333" ;
+            tl:start "1107.52" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "520.973333"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:f4eee33746704ae2a65bb430b8df62fc lma:segment_of _:Naaa4acb71f344b699e2c329555d76b49 ;
+    mo:time [ tl:duration "339.72"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "8447.64" ;
+            tl:start "8107.92" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:f5195406bf34465fa426e80f6d2d1412 lma:segment_of _:Naaa4acb71f344b699e2c329555d76b49 ;
+    mo:time [ tl:duration "371.986667"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "4628.346667" ;
+            tl:start "4256.36" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:fab007bdf4084c4bbf26fbf4b2fb53c2 lma:segment_of _:Naaa4acb71f344b699e2c329555d76b49 ;
+    mo:time [ tl:duration "444.226667"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "494.186667" ;
+            tl:start "49.96" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:fd095ca946be407c88f06ea426d65f35 lma:segment_of _:Naaa4acb71f344b699e2c329555d76b49 ;
+    mo:time [ tl:duration "442.04"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "8889.68" ;
+            tl:start "8447.64" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:fd19b50c347d445ba819cee5c0a898bc lma:segment_of _:Naaa4acb71f344b699e2c329555d76b49 ;
+    mo:time [ tl:duration "678.813333"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "5915.36" ;
+            tl:start "5236.546667" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+_:N8cb3909cb7154d93892b493abd756904 prov:hadRole lma:Transferer ;
+    foaf:name "Brian Green and Evan K."^^xsd:string .
+
+_:Ndcd2ca712d284f94bb39fb458bdabd7d prov:used _:N9c5438bdf4784932b9a0587fa0d9045f ;
+    prov:wasAssociatedWith _:N8cb3909cb7154d93892b493abd756904 .
+
+_:N9c5438bdf4784932b9a0587fa0d9045f mo:sampled_version _:Naaa4acb71f344b699e2c329555d76b49 .
+
+_:Naaa4acb71f344b699e2c329555d76b49 prov:wasGeneratedBy _:Ndcd2ca712d284f94bb39fb458bdabd7d .
+

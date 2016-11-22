@@ -13,8 +13,21 @@
 			$scope.SONG_VIEW = "Song View";
 			$scope.LOCATION_VIEW = "Location View";
 			$scope.VENUE_VIEW = "Venue View";
+			$scope.BS_VIEW = "BS View";
+			$scope.WELCOME_VIEW = "Welcome View";
 			
 			$scope.visualizations = [{name:"arcs"}, {name:"blocks"}, {name:"bubbles"}];
+			
+			$scope.range = function(min, max, step) {
+			    step = step || 1;
+			    var input = [];
+			    for (var i = min; i <= max; i += step) {
+			        input.push(i);
+			    }
+			    return input;
+			};
+			
+			
 			
 			$scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 11 };
 			var API_KEY = 'AIzaSyCRiXnxFJsxK_eR7UMOa6TEDG-LtNOurkE';
@@ -80,16 +93,138 @@
 					
 					$http.jsonp('https://archive.org/advancedsearch.php?q=collection:GratefulDead+AND+date:' + $scope.selectedShow.date + '&fl%5B%5D=identifier,title&rows=100000&output=json&callback=JSON_CALLBACK').success(function(data) {
 						$scope.selectedShow.recordings = data.response.docs ;
-						
-
 					});
-
 				});
-				
-				
-				
 			}
 			
+			$scope.gotoWelcomeView = function() {
+				
+				$scope.currentView = $scope.WELCOME_VIEW;
+			}
+			
+			//______________________________________
+			
+			
+			
+			$scope.enterSite = function() {
+				$http.get('files/temp_songs.txt').success(function(data) {
+					$scope.sampleSongs = data.split('\n');
+					$http.get('files/temp_ids.txt').success(function(data) {
+						$scope.sampleShowIds = data.split('\n');
+					
+						$http.get('files/temp_songs_2.txt').success(function(data) {
+							$scope.sampleSongs2 = data.split('\n');
+						
+							$scope.gotoShowView($scope.sampleShowIds[474]);
+							
+					
+						});
+						//$scope.gotoSongView($scope.sampleSongs[0]);
+					});
+				});
+			}
+
+			$scope.gotoBsView = function() {
+				/* var q = "PREFIX lma: <http://example.com/lma/vocab/> \
+						 SELECT ?id \
+						 WHERE { ?x lma:etree_concert ?id }";
+				
+				testQuery(q, function(r){
+					$scope.bs = r.results.bindings; 
+					$scope.$apply();
+
+				});	*/
+				$scope.currentView = $scope.BS_VIEW;
+			}
+			
+	
+			
+			$scope.queryButton = function(y, m, d) {
+				//console.log(d)
+				//d = "1982-10-10"
+				var dict = {};
+				y = "1982"
+				m = "10"
+				d = "10"
+				var q = "PREFIX etree: <http://etree.linkedmusic.org/vocab/> \
+		PREFIX mo: <http://purl.org/ontology/mo/> \
+		PREFIX tl: <http://purl.org/NET/c4dm/timeline.owl#> \
+		PREFIX lma: <http://example.com/lma/vocab/> \
+        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> \
+		PREFIX event: <http://purl.org/NET/c4dm/event.owl#> \
+		SELECT DISTINCT ?id ?file ?start ?end ?dur \
+		WHERE { ?event event:time [ tl:atDate \"VAR0-VAR1-VAR2\"^^xsd:date ] ; \
+					event:hasSubEvent [ lma:etree_concert ?id ] . \
+				 ?id event:hasSubEvent [ etree:audio ?file ] . \
+				 ?file mo:encodes ?signal . \
+				 ?signal mo:time [ tl:timeline [ a lma:ReferenceTimeLine ] ; \
+			 					   tl:start ?start ; \
+								   tl:end ?end ] ,  \
+							     [ tl:timeline ?sigtime ; \
+								   tl:duration ?dur ] . \
+				FILTER NOT EXISTS { ?sigtime a lma:ReferenceTimeLine }\
+			  } \
+			  ORDER BY ASC(?id)".replace(/VAR0/g, y).replace(/VAR1/g, m).replace(/VAR2/g, d);
+				
+				testQuery(q, function(r){
+					
+					/*
+					for (var i=0, item; item = r.results.bindings[i]; i++) { 
+						var id = item.id.value;
+						var file = item.file.value;
+						var start = item.start.value;     
+						var end = item.end.value;  
+						var dur = item.dur.value;   
+						
+						if (!(id in dict)) {
+							dict[id] = [];
+						}
+						dict[id].push([file, start, end, dur])
+					}
+					*/
+
+					
+					
+					
+					//$scope.bs = r.results.bindings; 
+					//$scope.bsdict = dict;
+					$scope.bsdict = r.results;
+					$scope.$apply();
+					
+				});	
+				//$scope.currentView = $scope.BS_VIEW;
+			}
+
+			
+			function testQuery(q, callback) {
+				
+				var endpoint = "http://127.0.0.1:3030/gd_match_0.999/query?query=";
+				var query = encodeURIComponent(q);
+				var u = endpoint + query;
+				//console.log(u);
+				//var res;
+				fetch(u)
+					.then(r=>r.json())
+					.then(j=>callback(j));
+				
+				/*
+			
+				fetch(u)
+				.then(function(r) { 
+					return r.json()
+				})
+				.then(function(j) {
+					callback(j)
+				}) ;
+				
+				*/
+			}
+	
+			
+			
+			
+			//______________________________________
+
 			function getShortYearDateString(date) {
 				date = new Date(date);
 				return '' + date.getYear() + ('0' + (date.getMonth()+1)).slice(-2) + ('0' + date.getUTCDate()).slice(-2);
@@ -171,23 +306,15 @@
 				}
 			}
 			
+			
+			
+			
+			$scope.gotoWelcomeView()
+			
 			//INIT
-			$http.get('files/temp_songs.txt').success(function(data) {
-				$scope.sampleSongs = data.split('\n');
-				$http.get('files/temp_ids.txt').success(function(data) {
-					$scope.sampleShowIds = data.split('\n');
-					
-					$http.get('files/temp_songs_2.txt').success(function(data) {
-						$scope.sampleSongs2 = data.split('\n');
-						
-						$scope.gotoShowView($scope.sampleShowIds[474]);
-					
-					});
-					//$scope.gotoSongView($scope.sampleSongs[0]);
-				});
-			});
 			
 			
+		
 			
 			
 		}]);

@@ -1,0 +1,268 @@
+@prefix : <http://example.com/lma/data/> .
+@prefix etree: <http://etree.linkedmusic.org/vocab/> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lma: <http://example.com/lma/vocab/> .
+@prefix mo: <http://purl.org/ontology/mo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tl: <http://purl.org/NET/c4dm/timeline.owl#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://etree.linkedmusic.org/performance/gd1982-10-10.123623.senn421.gans.miller.flac24> event:hasSubEvent <http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-10>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-12>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-13>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-14>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-15>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-16>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-18>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-19>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-2>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-20>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-21>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-22>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-24>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-25>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-3>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-5>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-6>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-7>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-8>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-9> .
+
+:afe4e7d3f80c40d4aaff187dfe9e4ea9 event:hasSubEvent [ mo:produced_sound [ mo:recorded_in :fda8b765ffb14ee2a28126ff5435cc0b ] ] .
+
+<http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s1t02.flac> mo:encodes :bde81c492b3149329f5cd60717aaa346 .
+
+<http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s1t03.flac> mo:encodes :c668567b1c1d4ab3985bbf957b982a9f .
+
+<http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s1t05.flac> mo:encodes :b8a02ee643b2437aae37fcc9c0c705c0 .
+
+<http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s1t06.flac> mo:encodes :d7dd6a26a2bd40a7bd044524ac649dd7 .
+
+<http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s1t07.flac> mo:encodes :db8ad45a00da4d1abc75ec8ced785fca .
+
+<http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s1t08.flac> mo:encodes :fb1d4abc61894958a9ae9cc1ecd6916c .
+
+<http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s1t09.flac> mo:encodes :a7599799922c4c60ab705e7b95e4ae85 .
+
+<http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s1t10.flac> mo:encodes :bff0a4325b57424b8210bc206a228c3f .
+
+<http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s2t02.flac> mo:encodes :ecd7fb1ac24a40418bbe06f02c5fd258 .
+
+<http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s2t03.flac> mo:encodes :d7baaebe51824973a785301a68089d7d .
+
+<http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s2t04.flac> mo:encodes :e9c444414db04149823969ba74097a5f .
+
+<http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s2t05.flac> mo:encodes :e3d33985b19e413ea1d699d61090a378 .
+
+<http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s2t06.flac> mo:encodes :dc7bcb727f5b453eaf41b3a911b63830 .
+
+<http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s2t08.flac> mo:encodes :b69927a78ab14f178f1c0c037c768291 .
+
+<http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s2t09.flac> mo:encodes :d1e720f966b242cfa8988fd2d9d17d74 .
+
+<http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s2t10.flac> mo:encodes :a121f08aaadb42ea85c72da7d0591c48 .
+
+<http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s2t11.flac> mo:encodes :b0e46ca172cb4821a16b98803de014ae .
+
+<http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s2t12.flac> mo:encodes :a2d513f52eac4a9782a661c0f5ad0803 .
+
+<http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s2t14.flac> mo:encodes :fb3b5079b9e544538a5f0c8f502bb650 .
+
+<http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s2t15.flac> mo:encodes :d81083b16bfd438186ae9d71f8f75917 .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-10> etree:audio <http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s1t10.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-12> etree:audio <http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s2t02.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-13> etree:audio <http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s2t03.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-14> etree:audio <http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s2t04.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-15> etree:audio <http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s2t05.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-16> etree:audio <http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s2t06.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-18> etree:audio <http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s2t08.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-19> etree:audio <http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s2t09.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-2> etree:audio <http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s1t02.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-20> etree:audio <http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s2t10.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-21> etree:audio <http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s2t11.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-22> etree:audio <http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s2t12.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-24> etree:audio <http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s2t14.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-25> etree:audio <http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s2t15.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-3> etree:audio <http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s1t03.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-5> etree:audio <http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s1t05.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-6> etree:audio <http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s1t06.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-7> etree:audio <http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s1t07.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-8> etree:audio <http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s1t08.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.123623.senn421.gans.miller.flac24-9> etree:audio <http://archive.org/download/gd1982-10-10.123623.senn421.gans.miller.flac24/gd82-10-10s1t09.flac> .
+
+:a121f08aaadb42ea85c72da7d0591c48 lma:segment_of _:N86d4fb5935944ba09ae71efdcba18f60 ;
+    mo:time [ tl:duration "468.735021"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "8889.71779417" ;
+            tl:start "8447.67779417" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:a2d513f52eac4a9782a661c0f5ad0803 lma:segment_of _:N86d4fb5935944ba09ae71efdcba18f60 ;
+    mo:time [ tl:end "9666.63751379" ;
+            tl:start "9173.10418079" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "498.289688"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:a7599799922c4c60ab705e7b95e4ae85 lma:segment_of _:N86d4fb5935944ba09ae71efdcba18f60 ;
+    mo:time [ tl:end "4256.83779638" ;
+            tl:start "3892.13112938" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "366.914208"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:b0e46ca172cb4821a16b98803de014ae lma:segment_of _:N86d4fb5935944ba09ae71efdcba18f60 ;
+    mo:time [ tl:duration "280.45825"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "9169.55224635" ;
+            tl:start "8886.15224635" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:b69927a78ab14f178f1c0c037c768291 lma:segment_of _:N86d4fb5935944ba09ae71efdcba18f60 ;
+    mo:time [ tl:duration "411.209104"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "8107.95238686" ;
+            tl:start "7697.33905386" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:b8a02ee643b2437aae37fcc9c0c705c0 lma:segment_of _:N86d4fb5935944ba09ae71efdcba18f60 ;
+    mo:time [ tl:duration "389.230563"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "2639.43421248" ;
+            tl:start "2250.20754548" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:bde81c492b3149329f5cd60717aaa346 lma:segment_of _:N86d4fb5935944ba09ae71efdcba18f60 ;
+    mo:time [ tl:duration "617.824292"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "1107.56835411" ;
+            tl:start "494.235021108" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:bff0a4325b57424b8210bc206a228c3f lma:segment_of _:N86d4fb5935944ba09ae71efdcba18f60 ;
+    mo:time [ tl:end "4627.54969153" ;
+            tl:start "4255.56302453" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "372.4035"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:c668567b1c1d4ab3985bbf957b982a9f lma:segment_of _:N86d4fb5935944ba09ae71efdcba18f60 ;
+    mo:time [ tl:duration "528.628979"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "1632.63334596" ;
+            tl:start "1111.66001296" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:d1e720f966b242cfa8988fd2d9d17d74 lma:segment_of _:N86d4fb5935944ba09ae71efdcba18f60 ;
+    mo:time [ tl:duration "314.522021"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "8421.92768252" ;
+            tl:start "8082.20768252" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:d7baaebe51824973a785301a68089d7d lma:segment_of _:N86d4fb5935944ba09ae71efdcba18f60 ;
+    mo:time [ tl:duration "670.510271"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "5906.04770696" ;
+            tl:start "5227.23437396" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:d7dd6a26a2bd40a7bd044524ac649dd7 lma:segment_of _:N86d4fb5935944ba09ae71efdcba18f60 ;
+    mo:time [ tl:duration "454.815958"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "3094.74414015" ;
+            tl:start "2635.19747315" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:d81083b16bfd438186ae9d71f8f75917 lma:segment_of _:N86d4fb5935944ba09ae71efdcba18f60 ;
+    mo:time [ tl:duration "408.355354"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "11201.1355091" ;
+            tl:start "10792.3488421" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:db8ad45a00da4d1abc75ec8ced785fca lma:segment_of _:N86d4fb5935944ba09ae71efdcba18f60 ;
+    mo:time [ tl:end "3354.23856004" ;
+            tl:start "3097.83856004" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "254.084667"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:dc7bcb727f5b453eaf41b3a911b63830 lma:segment_of _:N86d4fb5935944ba09ae71efdcba18f60 ;
+    mo:time [ tl:duration "440.471104"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "7212.35308892" ;
+            tl:start "6772.87308892" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:e3d33985b19e413ea1d699d61090a378 lma:segment_of _:N86d4fb5935944ba09ae71efdcba18f60 ;
+    mo:time [ tl:end "6773.66299484" ;
+            tl:start "6351.59632784" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "423.731042"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:e9c444414db04149823969ba74097a5f lma:segment_of _:N86d4fb5935944ba09ae71efdcba18f60 ;
+    mo:time [ tl:duration "446.824167"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "6351.25121723" ;
+            tl:start "5915.06455023" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:ecd7fb1ac24a40418bbe06f02c5fd258 lma:segment_of _:N86d4fb5935944ba09ae71efdcba18f60 ;
+    mo:time [ tl:end "5237.21022922" ;
+            tl:start "4807.86356222" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "430.65825"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:fb1d4abc61894958a9ae9cc1ecd6916c lma:segment_of _:N86d4fb5935944ba09ae71efdcba18f60 ;
+    mo:time [ tl:end "3891.71257783" ;
+            tl:start "3357.45924483" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "539.730458"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:fb3b5079b9e544538a5f0c8f502bb650 lma:segment_of _:N86d4fb5935944ba09ae71efdcba18f60 ;
+    mo:time [ tl:duration "380.868292"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "10792.7989537" ;
+            tl:start "10411.7456207" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:fda8b765ffb14ee2a28126ff5435cc0b mo:produced_signal _:N29abbac404f041cd8c4c62e0621437f8 ;
+    prov:wasAssociatedWith [ prov:hadRole lma:Taper ;
+            foaf:name "David Gans"^^xsd:string ] .
+
+_:N5ee2a11cccf64201ae0a300dfbf0d66f prov:used _:N29abbac404f041cd8c4c62e0621437f8 ;
+    prov:wasAssociatedWith [ prov:hadRole lma:Transferer ;
+            foaf:name "Charlie Miller"^^xsd:string ] .
+
+_:N29abbac404f041cd8c4c62e0621437f8 mo:sampled_version _:N86d4fb5935944ba09ae71efdcba18f60 .
+
+_:N86d4fb5935944ba09ae71efdcba18f60 prov:wasGeneratedBy _:N5ee2a11cccf64201ae0a300dfbf0d66f .
+

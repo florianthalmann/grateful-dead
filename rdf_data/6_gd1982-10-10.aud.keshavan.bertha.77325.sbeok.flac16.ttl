@@ -1,0 +1,136 @@
+@prefix : <http://example.com/lma/data/> .
+@prefix etree: <http://etree.linkedmusic.org/vocab/> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lma: <http://example.com/lma/vocab/> .
+@prefix mo: <http://purl.org/ontology/mo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tl: <http://purl.org/NET/c4dm/timeline.owl#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://etree.linkedmusic.org/performance/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16> event:hasSubEvent <http://etree.linkedmusic.org/track/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16-11>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16-12>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16-3>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16-4>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16-5>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16-6>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16-7>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16-8>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16-9> .
+
+:afe4e7d3f80c40d4aaff187dfe9e4ea9 event:hasSubEvent [ mo:produced_sound [ mo:recorded_in :eba8391ad51a454e83912ddafb2b5676 ] ] .
+
+<http://archive.org/download/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16/gd82-10-10d1t03.flac> mo:encodes :cd8597ce80ed4dfdaa98436357266038 .
+
+<http://archive.org/download/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16/gd82-10-10d1t04.flac> mo:encodes :ba64ceaebcb045d1bd4a245014c41ba3 .
+
+<http://archive.org/download/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16/gd82-10-10d1t05.flac> mo:encodes :b616530a34eb4b62bf7a1ea3de51c665 .
+
+<http://archive.org/download/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16/gd82-10-10d1t06.flac> mo:encodes :b0ffe40f6f5b446bb67a8396a7ad435c .
+
+<http://archive.org/download/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16/gd82-10-10d1t07.flac> mo:encodes :f8fa5531dae841d0ad22bf6dce1601a0 .
+
+<http://archive.org/download/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16/gd82-10-10d2t01.flac> mo:encodes :edb28a014764444880d156ee7ee31c3c .
+
+<http://archive.org/download/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16/gd82-10-10d2t02.flac> mo:encodes :f98995088193433a908ff2c89e7721f8 .
+
+<http://archive.org/download/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16/gd82-10-10d2t04.flac> mo:encodes :c05e911419714f63bba1bf1441856a50 .
+
+<http://archive.org/download/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16/gd82-10-10d2t05.flac> mo:encodes :d89da8fdd51840e6af92180529614d18 .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16-11> etree:audio <http://archive.org/download/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16/gd82-10-10d2t04.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16-12> etree:audio <http://archive.org/download/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16/gd82-10-10d2t05.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16-3> etree:audio <http://archive.org/download/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16/gd82-10-10d1t03.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16-4> etree:audio <http://archive.org/download/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16/gd82-10-10d1t04.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16-5> etree:audio <http://archive.org/download/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16/gd82-10-10d1t05.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16-6> etree:audio <http://archive.org/download/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16/gd82-10-10d1t06.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16-7> etree:audio <http://archive.org/download/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16/gd82-10-10d1t07.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16-8> etree:audio <http://archive.org/download/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16/gd82-10-10d2t01.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16-9> etree:audio <http://archive.org/download/gd1982-10-10.aud.keshavan.bertha.77325.sbeok.flac16/gd82-10-10d2t02.flac> .
+
+:b0ffe40f6f5b446bb67a8396a7ad435c lma:segment_of _:N4fcb7f2fd39f4434b87d814630e15df2 ;
+    mo:time [ tl:duration "380.746667"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "2635.492576" ;
+            tl:start "2246.265909" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:b616530a34eb4b62bf7a1ea3de51c665 lma:segment_of _:N4fcb7f2fd39f4434b87d814630e15df2 ;
+    mo:time [ tl:end "2192.36267092" ;
+            tl:start "1568.62933792" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "562.413333"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:ba64ceaebcb045d1bd4a245014c41ba3 lma:segment_of _:N4fcb7f2fd39f4434b87d814630e15df2 ;
+    mo:time [ tl:end "1615.24443741" ;
+            tl:start "1094.27110441" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "505.266667"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:c05e911419714f63bba1bf1441856a50 lma:segment_of _:N4fcb7f2fd39f4434b87d814630e15df2 ;
+    mo:time [ tl:duration "427.013333"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "5237.19534269" ;
+            tl:start "4807.84867569" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:cd8597ce80ed4dfdaa98436357266038 lma:segment_of _:N4fcb7f2fd39f4434b87d814630e15df2 ;
+    mo:time [ tl:duration "609.213333"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "1106.89678972" ;
+            tl:start "493.563456718" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:d89da8fdd51840e6af92180529614d18 lma:segment_of _:N4fcb7f2fd39f4434b87d814630e15df2 ;
+    mo:time [ tl:duration "673.453333"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "5915.89671821" ;
+            tl:start "5237.08338521" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:eba8391ad51a454e83912ddafb2b5676 mo:produced_signal _:N0fa79026754d4f9890fed462297d9e5b ;
+    prov:wasAssociatedWith [ prov:hadRole lma:Taper ;
+            foaf:name "Rango Keshavan"^^xsd:string ] .
+
+:edb28a014764444880d156ee7ee31c3c lma:segment_of _:N4fcb7f2fd39f4434b87d814630e15df2 ;
+    mo:time [ tl:duration "255.533333"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "3357.34175516" ;
+            tl:start "3100.94175516" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:f8fa5531dae841d0ad22bf6dce1601a0 lma:segment_of _:N4fcb7f2fd39f4434b87d814630e15df2 ;
+    mo:time [ tl:duration "452.426667"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "3095.88998796" ;
+            tl:start "2636.34332096" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:f98995088193433a908ff2c89e7721f8 lma:segment_of _:N4fcb7f2fd39f4434b87d814630e15df2 ;
+    mo:time [ tl:end "3891.47990096" ;
+            tl:start "3357.22656796" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "530.693333"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+_:N1e94ce2f24e845c9bcf3787ca9a12c25 prov:used _:N0fa79026754d4f9890fed462297d9e5b ;
+    prov:wasAssociatedWith [ prov:hadRole lma:Transferer ;
+            foaf:name "Jay Ashley"^^xsd:string ] .
+
+_:N0fa79026754d4f9890fed462297d9e5b mo:sampled_version _:N4fcb7f2fd39f4434b87d814630e15df2 .
+
+_:N4fcb7f2fd39f4434b87d814630e15df2 prov:wasGeneratedBy _:N1e94ce2f24e845c9bcf3787ca9a12c25 .
+

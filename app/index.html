@@ -27,8 +27,13 @@
 </head>
 <body ng-app="gratefulDead">
 	<div  ng-controller="MainController">
-		<h1>Grateful Live</h1>
+		
+		<!-- <h1>Grateful Live</h1> --> 
 		<div ng-if="currentView == SHOW_VIEW">
+			<div class="centeredf">
+			    <img src="images/logo3.png" height=220>
+			</div>
+			
 			<h2>{{ selectedShow.title }}</h2>
 			<h3><a ng-href="#" ng-click="gotoLocationView(selectedShow.coverage)">{{selectedShow.coverage}}</a></h3>
 			<h3><a ng-href="#" ng-click="gotoVenueView(selectedShow.venue, selectedShow.coverage)">{{selectedShow.venue}}</a></h3>
@@ -46,10 +51,16 @@
 			<div ng-repeat="r in selectedShow.recordings">
 				<a ng-href="https://archive.org/details/{{r.identifier}}" target="_blank">{{r.identifier}}</a>
 			</div>
+			<br>
+			<a ng-href="#" ng-click="gotoBsView()">bs</a>	
 			<br><br>
 			
 		</div>
 		<div ng-if="currentView == SONG_VIEW">
+			<div class="centeredf">
+			    <img src="images/logo3.png" height=220>
+			</div>
+			
 			<h2>{{ selectedSong.name }}</h2>
 			<select ng-init="selectedVisualization = visualizations[1]" ng-model="selectedVisualization" ng-options="v.name for v in visualizations"></select>
 			<div ng-repeat="v in selectedSong.versions">
@@ -61,6 +72,10 @@
 			</div>
 		</div>
 		<div ng-if="currentView == LOCATION_VIEW">
+			<div class="centeredf">
+			    <img src="images/logo3.png" height=220>
+			</div>
+			
 			<h2>{{ selectedLocation.name }}</h2>
 			<div id="map_canvas">
 				<ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
@@ -75,6 +90,10 @@
 			</div>
 		</div>
 		<div ng-if="currentView == VENUE_VIEW">
+			<div class="centeredf">
+			    <img src="images/logo3.png" height=220>
+			</div>
+			
 			<h2>{{ selectedVenue.name }}</h2>
 			<div id="map_canvas">
 				<ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
@@ -88,6 +107,62 @@
 				<a ng-href="#" ng-click="gotoShowView(s.identifier)">{{s.title}}</a>
 			</div>
 		</div>
+		
+		<div ng-if="currentView == BS_VIEW">
+			<div class="centeredf">
+			    <img src="images/logo3.png" height=220>
+			</div>
+			
+			<h2>rdf 1982-10-10</h2>
+				
+			<select class="form-control" ng-model="year">
+			    <option ng-repeat="y in range(1965,1995)" value="{{y}}">{{y}} </option>
+			</select>
+			
+			<select class="form-control" ng-model="month">
+			    <option ng-repeat="m in range(1,12)" value="{{m}}">{{m}}</option>
+			</select>
+			<select class="form-control" ng-model="day">
+			    <option ng-repeat="d in range(1,31)" value="{{d}}">{{d}}</option>
+			</select>
+				
+			 <button ng-click="queryButton(year, month, day)"></button>
+			 <br><br>
+			<!--	
+			<div ng-repeat="(k, v) in bsdict">
+				<p><b><small>{{k}}</small></b></p>
+				<div ng-repeat="r in v">
+					<p><small>{{r[0]}}: {{r[1]}}, {{r[2]}}, {{r[3]}}</small></p>
+				</div>
+				<br>
+			</div>
+			-->
+				<p>{{ bsdict }}</p>
+		</div>
+		
+		<div ng-if="currentView == WELCOME_VIEW">
+			
+			<div class="centered">
+			    <img src="images/logo3.png" height=220 ng-click="enterSite()">
+				
+			</div>
+			
+			
+			<div class="videoContainer">
+			    <div class="overlay"></div>
+			    <video autoplay loop muted>
+			        <source src="video/gd1.mp4" type="video/mp4">
+					<!-- <source src="https://archive.org/download/youtube-pu-y6rqV53g/Haight_Ashbury_Grateful_Dead_Morning_Dew-pu-y6rqV53g.mp4" type="video/mp4">  -->
+						
+			    </video>
+			</div>
+
+	
+		
 	</div>
+	
+	
+		
+	
 </body>
 </html>

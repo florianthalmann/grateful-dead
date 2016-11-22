@@ -1,0 +1,234 @@
+@prefix : <http://example.com/lma/data/> .
+@prefix etree: <http://etree.linkedmusic.org/vocab/> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lma: <http://example.com/lma/vocab/> .
+@prefix mo: <http://purl.org/ontology/mo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tl: <http://purl.org/NET/c4dm/timeline.owl#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://etree.linkedmusic.org/performance/gd1982-10-10.111039.nak300.hoey.flac16> event:hasSubEvent <http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-10>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-12>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-13>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-14>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-15>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-17>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-18>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-19>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-2>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-20>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-21>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-23>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-24>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-3>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-6>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-7>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-8>,
+        <http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-9> .
+
+:afe4e7d3f80c40d4aaff187dfe9e4ea9 event:hasSubEvent [ mo:produced_sound [ mo:recorded_in :f64fd38b31304c099f9b61c20acaef64 ] ] .
+
+<http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d1t02.flac> mo:encodes :d448f73c94054b63b461fe9f6c49c4c9 .
+
+<http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d1t03.flac> mo:encodes :e2dee42c42c54d7f8c54c67a750bacf7 .
+
+<http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d1t06.flac> mo:encodes :bdefa97b86a34edaab0ead9c90bc0296 .
+
+<http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d1t07.flac> mo:encodes :fd0245cb69284202a1c40d9b30115fdb .
+
+<http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d1t08.flac> mo:encodes :d45ae71ef1ab47acb0b71adab15bacb5 .
+
+<http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d1t09.flac> mo:encodes :cf7d2129dd824ffc9d4ca9d25a7b151a .
+
+<http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d1t10.flac> mo:encodes :da78ccbfe3e24211ae96bf4e4aa4b359 .
+
+<http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d2t02.flac> mo:encodes :b330831614e14360b863c275ec362e5e .
+
+<http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d2t03.flac> mo:encodes :be7fb3df1deb45288471c44a7f88ba9b .
+
+<http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d2t04.flac> mo:encodes :b5d4dcb8edd54922b6eecc2d7f045b18 .
+
+<http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d2t05.flac> mo:encodes :f59282e9db214d1cb3589e4b0ef411de .
+
+<http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d3t01.flac> mo:encodes :afc73db7f0484d8198e67161c5bcccb8 .
+
+<http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d3t02.flac> mo:encodes :d2b3bd39bb6d469eaa9819acd83e0bc9 .
+
+<http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d3t03.flac> mo:encodes :f88194ba1ec142d4a2521660acb05660 .
+
+<http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d3t04.flac> mo:encodes :a3e8e34201c24950bc62e824ce8c1661 .
+
+<http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d3t05.flac> mo:encodes :e1d6e488ab2548b5a778d1743faffd8b .
+
+<http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d3t07.flac> mo:encodes :e0bf29ab7e954ffab94c48474b18f4b1 .
+
+<http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d3t08.flac> mo:encodes :fae1ad4d7e27414fa363caa9b738a83b .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-10> etree:audio <http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d1t10.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-12> etree:audio <http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d2t02.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-13> etree:audio <http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d2t03.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-14> etree:audio <http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d2t04.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-15> etree:audio <http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d2t05.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-17> etree:audio <http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d3t01.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-18> etree:audio <http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d3t02.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-19> etree:audio <http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d3t03.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-2> etree:audio <http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d1t02.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-20> etree:audio <http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d3t04.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-21> etree:audio <http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d3t05.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-23> etree:audio <http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d3t07.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-24> etree:audio <http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d3t08.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-3> etree:audio <http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d1t03.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-6> etree:audio <http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d1t06.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-7> etree:audio <http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d1t07.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-8> etree:audio <http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d1t08.flac> .
+
+<http://etree.linkedmusic.org/track/gd1982-10-10.111039.nak300.hoey.flac16-9> etree:audio <http://archive.org/download/gd1982-10-10.111039.nak300.hoey.flac16/d1t09.flac> .
+
+:a3e8e34201c24950bc62e824ce8c1661 lma:segment_of _:N7332a26c56ee4589b62bf1ef105cda1f ;
+    mo:time [ tl:end "9169.475003" ;
+            tl:start "8886.075003" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "278.133333"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:afc73db7f0484d8198e67161c5bcccb8 lma:segment_of _:N7332a26c56ee4589b62bf1ef105cda1f ;
+    mo:time [ tl:end "8106.20491618" ;
+            tl:start "7695.59158318" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "419.2"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:b330831614e14360b863c275ec362e5e lma:segment_of _:N7332a26c56ee4589b62bf1ef105cda1f ;
+    mo:time [ tl:duration "672.866667"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "5914.73023712" ;
+            tl:start "5235.91690412" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:b5d4dcb8edd54922b6eecc2d7f045b18 lma:segment_of _:N7332a26c56ee4589b62bf1ef105cda1f ;
+    mo:time [ tl:duration "418.64"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "6773.5116036" ;
+            tl:start "6351.4449366" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:bdefa97b86a34edaab0ead9c90bc0296 lma:segment_of _:N7332a26c56ee4589b62bf1ef105cda1f ;
+    mo:time [ tl:duration "440.48"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "3084.33610825" ;
+            tl:start "2624.78944125" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:be7fb3df1deb45288471c44a7f88ba9b lma:segment_of _:N7332a26c56ee4589b62bf1ef105cda1f ;
+    mo:time [ tl:end "6351.43014814" ;
+            tl:start "5915.24348114" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "433.16"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:cf7d2129dd824ffc9d4ca9d25a7b151a lma:segment_of _:N7332a26c56ee4589b62bf1ef105cda1f ;
+    mo:time [ tl:duration "343.106667"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "4237.46788609" ;
+            tl:start "3872.76121909" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:d2b3bd39bb6d469eaa9819acd83e0bc9 lma:segment_of _:N7332a26c56ee4589b62bf1ef105cda1f ;
+    mo:time [ tl:duration "313.986667"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "8422.16788177" ;
+            tl:start "8082.44788177" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:d448f73c94054b63b461fe9f6c49c4c9 lma:segment_of _:N7332a26c56ee4589b62bf1ef105cda1f ;
+    mo:time [ tl:duration "607.52"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "1107.36884828" ;
+            tl:start "494.035515283" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:d45ae71ef1ab47acb0b71adab15bacb5 lma:segment_of _:N7332a26c56ee4589b62bf1ef105cda1f ;
+    mo:time [ tl:duration "531.533333"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "3891.59273471" ;
+            tl:start "3357.33940171" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:da78ccbfe3e24211ae96bf4e4aa4b359 lma:segment_of _:N7332a26c56ee4589b62bf1ef105cda1f ;
+    mo:time [ tl:end "4622.18073816" ;
+            tl:start "4250.19407116" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "381.626667"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:e0bf29ab7e954ffab94c48474b18f4b1 lma:segment_of _:N7332a26c56ee4589b62bf1ef105cda1f ;
+    mo:time [ tl:duration "378.733333"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "10792.6480856" ;
+            tl:start "10411.5947526" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:e1d6e488ab2548b5a778d1743faffd8b lma:segment_of _:N7332a26c56ee4589b62bf1ef105cda1f ;
+    mo:time [ tl:duration "493.64"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "9666.500671" ;
+            tl:start "9172.967338" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:e2dee42c42c54d7f8c54c67a750bacf7 lma:segment_of _:N7332a26c56ee4589b62bf1ef105cda1f ;
+    mo:time [ tl:end "1581.60868434" ;
+            tl:start "1060.63535134" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "469.653333"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:f59282e9db214d1cb3589e4b0ef411de lma:segment_of _:N7332a26c56ee4589b62bf1ef105cda1f ;
+    mo:time [ tl:duration "435.373333"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "7212.52148845" ;
+            tl:start "6773.04148845" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:f64fd38b31304c099f9b61c20acaef64 mo:produced_signal [ mo:sampled_version _:N7332a26c56ee4589b62bf1ef105cda1f ] .
+
+:f88194ba1ec142d4a2521660acb05660 lma:segment_of _:N7332a26c56ee4589b62bf1ef105cda1f ;
+    mo:time [ tl:end "8889.50513623" ;
+            tl:start "8447.46513623" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "464.466667"^^xsd:duration ;
+            tl:timeline [ ] ] .
+
+:fae1ad4d7e27414fa363caa9b738a83b lma:segment_of _:N7332a26c56ee4589b62bf1ef105cda1f ;
+    mo:time [ tl:duration "414.986667"^^xsd:duration ;
+            tl:timeline [ ] ],
+        [ tl:end "11210.5320975" ;
+            tl:start "10801.7454305" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ] .
+
+:fd0245cb69284202a1c40d9b30115fdb lma:segment_of _:N7332a26c56ee4589b62bf1ef105cda1f ;
+    mo:time [ tl:end "3356.19451815" ;
+            tl:start "3099.79451815" ;
+            tl:timeline :cea5e22e160a44f397ef651dc885680b ],
+        [ tl:duration "253.826667"^^xsd:duration ;
+            tl:timeline [ ] ] .
+

@@ -7,11 +7,12 @@ html, body { height: 100%; width: 100%; }
 
 h1, h2, h3, body, button, input, select {
 	font-family: Avenir Next;
-	font-size: 18px;
+	font-size: 14px;
 	text-align: left;
 	font-weight: 300;
-	background-color: #ADD8E6;
+	
 	padding:5px 10px;
+	color: #757575;
 }
 
 h1 { font-size: 200%; }
@@ -21,7 +22,8 @@ h2 { font-size: 120%; font-weight: 400; }
 h3 { font-size: 120%; font-weight: 350; }
 
 body { text-align: left; 
-	 margin: 1cm ;}
+	 margin: 1cm ;
+ background-color: #000000; }
 
 button, input, select {
 	-moz-border-radius:12px;
@@ -102,4 +104,60 @@ button:hover {
 	-o-transform: rotate(-45deg);
 	-ms-transform: rotate(-45deg);
 	transform: rotate(-45deg);
+}
+
+
+.videoContainer { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    /* background: url(sections/index/video.jpg) no-repeat; */
+    background-size: cover; 
+}
+.videoContainer video {
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    z-index: -100;
+}
+.videoContainer .overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    background: black;
+    opacity: 0.7;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  opacity: 0.2;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+.centered:hover {
+    opacity: 0.4;
+}
+
+.centeredf {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  opacity: 0.2;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
 }
