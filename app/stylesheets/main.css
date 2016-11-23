@@ -3,11 +3,14 @@
 	padding: 0;
 }
 
-html, body { height: 100%; width: 100%; }
+html, body { 
+	height: 100%; 
+	max-width: 100%; 
+}
 
 h1, h2, h3, body, button, input, select {
 	font-family: Avenir Next;
-	font-size: 14px;
+	font-size: 16px;
 	text-align: left;
 	font-weight: 300;
 	
@@ -15,15 +18,15 @@ h1, h2, h3, body, button, input, select {
 	color: #757575;
 }
 
-h1 { font-size: 200%; }
+h1 { font-size: 250%; }
 
-h2 { font-size: 120%; font-weight: 400; }
+h2 { font-size: 200%; font-weight: 400; }
 
 h3 { font-size: 120%; font-weight: 350; }
 
 body { text-align: left; 
 	 margin: 1cm ;
- background-color: #000000; }
+ background-color: #121212; }
 
 button, input, select {
 	-moz-border-radius:12px;
@@ -57,7 +60,9 @@ button:hover {
 
 .angular-google-map,
 .angular-google-map-container {
-  height: 200px;
+  
+
+  height: 300px;
 }
 
 /**
@@ -141,16 +146,20 @@ button:hover {
 }
 
 .centered {
+  /*  transition: 150ms; */
   position: fixed;
   top: 50%;
   left: 50%;
   opacity: 0.2;
-  /* bring your own prefixes */
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); 
+  /* transform: translate(-50%, -50%) scale(1); */
 }
 
 .centered:hover {
+	/*  transition: 150ms; */
     opacity: 0.4;
+	/* transform: translate(-50%, -50%) scale(1.05); */
+
 }
 
 .centeredf {
@@ -158,6 +167,45 @@ button:hover {
   top: 50%;
   left: 50%;
   opacity: 0.2;
-  /* bring your own prefixes */
   transform: translate(-50%, -50%);
 }
+
+#img_scroll {
+    position: relative;
+    border: 2px solid #757575;
+    border-radius: 3px;
+}
+
+ul.images {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  /* width: 1000px; */
+  overflow-x: auto;
+  background-color: #151515;
+}
+ul.images li {
+  display: inline;
+}
+
+#flex_align {
+  display: flex;
+}
+#flex_narrow {
+  width: 500px;
+  padding-left: 10px;
+  background-color: #151515;
+/*  border: 3px solid #757575;
+  border-radius: 2px; */
+  
+}
+#flex_wide {
+  flex: 1;
+/*   border: 2px solid #757575;
+  border-radius: 3px; */
+}
+
+.padit {
+	padding: 0px 8px;
+}
+

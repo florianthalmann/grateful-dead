@@ -269,8 +269,11 @@
 
 			function getImages(searchQuery, callback) {
 				$http.get('https://www.googleapis.com/customsearch/v1?key=' + API_KEY + '&cx=' + SEARCH_ID + '&searchType=image&q=' + searchQuery).success(function(data) {
-					callback(data.items.map(function(i){return i.link;}).slice(0,3));
+					callback(data.items.map(function(i){return i.link;}).slice(0,5));
 				});
+				
+				//$http.get('https://www.google.com/search?site=&tbm=isch&q=' + searchQuery).success(function(data) 
+				
 			}
 
 			function extractSetlist(metadata) {
