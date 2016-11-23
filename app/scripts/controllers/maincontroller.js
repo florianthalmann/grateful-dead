@@ -108,7 +108,7 @@
 
 			$scope.gotoWelcomeView = function() {
 
-				$scope.currentView = $scope.WELCOME_VIEW;
+				$scope.currentView = $scope.BS_VIEW;
 			}
 
 			//______________________________________
@@ -144,6 +144,11 @@
 
 				});	*/
 				$scope.currentView = $scope.BS_VIEW;
+			}
+
+			$scope.onClick = function(item) {
+				console.log(item)
+				window.location.href = item;
 			}
 
 
@@ -271,9 +276,9 @@
 				$http.get('https://www.googleapis.com/customsearch/v1?key=' + API_KEY + '&cx=' + SEARCH_ID + '&searchType=image&q=' + searchQuery).success(function(data) {
 					callback(data.items.map(function(i){return i.link;}).slice(0,5));
 				});
-				
-				//$http.get('https://www.google.com/search?site=&tbm=isch&q=' + searchQuery).success(function(data) 
-				
+
+				//$http.get('https://www.google.com/search?site=&tbm=isch&q=' + searchQuery).success(function(data)
+
 			}
 
 			function extractSetlist(metadata) {
@@ -324,7 +329,7 @@
 			$scope.gotoWelcomeView()
 
 			//INIT
-			
+
 
 
 
