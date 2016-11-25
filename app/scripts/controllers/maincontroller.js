@@ -108,7 +108,8 @@
 
 			$scope.gotoWelcomeView = function() {
 
-				$scope.currentView = $scope.BS_VIEW;
+				//$scope.currentView = $scope.BS_VIEW;
+				$scope.currentView = $scope.WELCOME_VIEW;
 			}
 
 			//______________________________________
@@ -148,7 +149,9 @@
 
 			$scope.onClick = function(item) {
 				console.log(item)
-				window.location.href = item;
+				//window.location.href = item;
+				window.open(item,'_blank');
+				
 			}
 
 
@@ -166,17 +169,18 @@
 		PREFIX lma: <http://example.com/lma/vocab/> \
         PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> \
 		PREFIX event: <http://purl.org/NET/c4dm/event.owl#> \
-		SELECT DISTINCT ?id ?file ?start ?end ?dur \
+		SELECT DISTINCT ?id ?track ?file ?start ?end ?dur \
 		WHERE { ?event event:time [ tl:atDate \"VAR0-VAR1-VAR2\"^^xsd:date ] ; \
 					event:hasSubEvent [ lma:etree_concert ?id ] . \
-				 ?id event:hasSubEvent [ etree:audio ?file ] . \
+				 ?id event:hasSubEvent ?track . \
+				 ?track etree:audio ?file . \
 				 ?file mo:encodes ?signal . \
 				 ?signal mo:time [ tl:timeline [ a lma:ReferenceTimeLine ] ; \
 			 					   tl:start ?start ; \
 								   tl:end ?end ] ,  \
 							     [ tl:timeline ?sigtime ; \
 								   tl:duration ?dur ] . \
-				FILTER NOT EXISTS { ?sigtime a lma:ReferenceTimeLine }\
+				FILTER NOT EXISTS { ?sigtime a lma:ReferenceTimeLine } \
 			  } \
 			  ORDER BY ASC(?id)".replace(/VAR0/g, y).replace(/VAR1/g, m).replace(/VAR2/g, d);
 
@@ -272,37 +276,24 @@
 			}
 
 			function getImages(searchQuery, callback) {
-
-				$http.get('https://www.googleapis.com/customsearch/v1?key=' + API_KEY + '&cx=' + SEARCH_ID + '&searchType=image&q=' + searchQuery).success(function(data) {
-					callback(data.items.map(function(i){return i.link;}).slice(0,5));
-				});
-
-
+				
 				/*
 				var xhr = new XMLHttpRequest();
-				xhr.open("GET", "https://cors.now.sh/https://www.google.com/search?site=&tbm=isch&q=hello", true);
+				xhr.open("GET", "https://cors.now.sh/https://www.google.com/search?site=&tbm=isch&q=" + searchQuery, true);
 				xhr.onload = function (e) {
 				  if (xhr.readyState === 4) {
 				    if (xhr.status === 200) {
 				      console.log(xhr.responseText);
-  					//$scope.bsdict = xhr.responseText;
-
-					//https:\/\/encrypted-tbn0\.gstatic\.com\/images\?q=tbn:(.*)\\"
-
-					//$scope.bsdict  = xhr.responseText.match(/(?:"[^"]*"|^[^"]*$)/gu);
-
 					var llist = xhr.responseText.match(/https:\/\/encrypted-tbn(.*?)\.gstatic\.com\/images\?q=tbn:(.*?)\\\"/g);
-
 					llist.forEach(function(part, index, theArray) {
-					  theArray[index] = theArray[index].slice(0, -2);
+					  theArray[index] = theArray[index].slice(0,-2);
 					});
+					console.log(llist.slice(0,5))
+					$scope.$apply();
+				
+				 // LINKS ARE IN llist array:
+					return llist.slice(0,5)
 
-					return llist;
-
-
-
-					console.log($scope.bsdict)
-  					$scope.$apply();
 				    } else {
 				      console.error(xhr.statusText);
 				    }
@@ -312,12 +303,14 @@
 				  console.error(xhr.statusText);
 				};
 				xhr.send(null);
-
 				*/
 
-
-
-				//$http.get('https://www.google.com/search?site=&tbm=isch&q=' + searchQuery).success(function(data)
+				
+				
+				$http.get('https://www.googleapis.com/customsearch/v1?key=' + API_KEY + '&cx=' + SEARCH_ID + '&searchType=image&q=' + searchQuery).success(function(data) {
+					callback(data.items.map(function(i){console.log(i.link); return i.link;}).slice(0,5));
+				});
+				
 
 
 			}
