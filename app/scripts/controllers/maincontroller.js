@@ -277,7 +277,9 @@
 
 			function getImages(searchQuery, callback) {
 				
-				/*
+				
+				// LINKS ARE IN llist array:
+			
 				var xhr = new XMLHttpRequest();
 				xhr.open("GET", "https://cors.now.sh/https://www.google.com/search?site=&tbm=isch&q=" + searchQuery, true);
 				xhr.onload = function (e) {
@@ -288,11 +290,11 @@
 					llist.forEach(function(part, index, theArray) {
 					  theArray[index] = theArray[index].slice(0,-2);
 					});
+					
 					console.log(llist.slice(0,5))
-					$scope.$apply();
-				
-				 // LINKS ARE IN llist array:
-					return llist.slice(0,5)
+					
+					
+					callback(llist.slice(0,5))
 
 				    } else {
 				      console.error(xhr.statusText);
@@ -303,15 +305,15 @@
 				  console.error(xhr.statusText);
 				};
 				xhr.send(null);
-				*/
-
 				
+
+			/*	
 				
 				$http.get('https://www.googleapis.com/customsearch/v1?key=' + API_KEY + '&cx=' + SEARCH_ID + '&searchType=image&q=' + searchQuery).success(function(data) {
 					callback(data.items.map(function(i){console.log(i.link); return i.link;}).slice(0,5));
 				});
 				
-
+*/
 
 			}
 
