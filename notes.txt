@@ -1,2 +1,18 @@
 in semantic player:
 1982-10-10 "looks like rain"
+
+
+					var req = new XMLHttpRequest();  
+					req.open('GET', 'https://cors.now.sh/https://www.tagesschau.de', true );   
+					
+					
+					if (req.readyState === 4) {
+					    if (req.status === 200) {
+					      console.log(req.responseText);
+					    } else {
+					      console.error(req.statusText);
+					    }
+					}	
+					//if(req.status == 200)  
+					//   console.log(req.responseText);
+					req.send(null);  

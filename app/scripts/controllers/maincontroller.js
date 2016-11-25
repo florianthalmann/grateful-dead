@@ -191,13 +191,13 @@
 						dict[id].push([file, start, end, dur])
 					}
 					*/
-
-
+					
 
 
 					//$scope.bs = r.results.bindings;
 					//$scope.bsdict = dict;
 					$scope.bsdict = r.results;
+					
 					$scope.$apply();
 
 				});
@@ -268,11 +268,47 @@
 			}
 
 			function getImages(searchQuery, callback) {
+				
 				$http.get('https://www.googleapis.com/customsearch/v1?key=' + API_KEY + '&cx=' + SEARCH_ID + '&searchType=image&q=' + searchQuery).success(function(data) {
 					callback(data.items.map(function(i){return i.link;}).slice(0,5));
 				});
 				
-				//$http.get('https://www.google.com/search?site=&tbm=isch&q=' + searchQuery).success(function(data) 
+				/*
+				var xhr = new XMLHttpRequest();
+				xhr.open("GET", "https://cors.now.sh/https://www.google.com/search?site=&tbm=isch&q=hello", true);
+				xhr.onload = function (e) {
+				  if (xhr.readyState === 4) {
+				    if (xhr.status === 200) {
+				      console.log(xhr.responseText);
+  					//$scope.bsdict = xhr.responseText;
+					
+					//https:\/\/encrypted-tbn0\.gstatic\.com\/images\?q=tbn:(.*)\\"
+					
+					//$scope.bsdict  = xhr.responseText.match(/(?:"[^"]*"|^[^"]*$)/gu);
+			
+					var llist = xhr.responseText.match(/https:\/\/encrypted-tbn(.*?)\.gstatic\.com\/images\?q=tbn:(.*?)\\\"/g);
+					
+					llist.forEach(function(part, index, theArray) {
+					  theArray[index] = theArray[index].slice(0, -2);
+					});
+
+					return llist;
+
+	
+
+					console.log($scope.bsdict)
+  					$scope.$apply();
+				    } else {
+				      console.error(xhr.statusText);
+				    }
+				  }
+				};
+				xhr.onerror = function (e) {
+				  console.error(xhr.statusText);
+				};
+				xhr.send(null);
+				
+				*/
 				
 			}
 
