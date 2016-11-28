@@ -169,11 +169,12 @@
 		PREFIX lma: <http://example.com/lma/vocab/> \
         PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> \
 		PREFIX event: <http://purl.org/NET/c4dm/event.owl#> \
-		SELECT DISTINCT ?id ?track ?file ?start ?end ?dur \
+		SELECT ?id ?track ?file ?mp ?start ?end ?dur \
 		WHERE { ?event event:time [ tl:atDate \"VAR0-VAR1-VAR2\"^^xsd:date ] ; \
 					event:hasSubEvent [ lma:etree_concert ?id ] . \
 				 ?id event:hasSubEvent ?track . \
 				 ?track etree:audio ?file . \
+				 ?track etree:audio ?mp . \
 				 ?file mo:encodes ?signal . \
 				 ?signal mo:time [ tl:timeline [ a lma:ReferenceTimeLine ] ; \
 			 					   tl:start ?start ; \
@@ -181,8 +182,11 @@
 							     [ tl:timeline ?sigtime ; \
 								   tl:duration ?dur ] . \
 				FILTER NOT EXISTS { ?sigtime a lma:ReferenceTimeLine } \
+									 FILTER (STRENDS(str(?mp), \"mp3\")) \
 			  } \
 			  ORDER BY ASC(?id)".replace(/VAR0/g, y).replace(/VAR1/g, m).replace(/VAR2/g, d);
+			  
+			  console.log(q)
 
 				testQuery(q, function(r){
 
