@@ -297,9 +297,9 @@
 					  theArray[index] = theArray[index].slice(6,-2);
 					});
 					
-					console.log(llist.slice(0,5))
-					callback(llist.slice(0,5))
-					return llist.slice(0,5)
+					console.log(llist.slice(0,10))
+					callback(llist.slice(0,10))
+					$scope.$apply();
 					
 
 				    } else {
@@ -313,12 +313,12 @@
 				xhr.send(null);
 				
 
-				
+				/*
 				$http.get('https://www.googleapis.com/customsearch/v1?key=' + API_KEY + '&cx=' + SEARCH_ID + '&searchType=image&q=' + searchQuery).success(function(data) {
 					callback(data.items.map(function(i){console.log(i.link); return i.link;}).slice(0,5));
 				});
 
-
+				*/
 
 			}
 
@@ -367,11 +367,11 @@
 
 
 
-			$scope.gotoWelcomeView()
+			
 
 			//INIT
 
-
+			$scope.gotoWelcomeView()
 
 
 
