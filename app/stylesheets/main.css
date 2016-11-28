@@ -16,6 +16,7 @@ h1, h2, h3, body, button, input, select {
 	
 	padding:5px 10px;
 	color: #757575;
+	
 }
 
 h1 { font-size: 250%; }
@@ -209,3 +210,11 @@ ul.images li {
 	padding: 0px 8px;
 }
 
+
+a:link {
+    color: #757575;
+}
+
+a:visited {
+    color: #999999;
+}
