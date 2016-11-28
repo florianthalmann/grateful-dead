@@ -42,6 +42,8 @@
 			<h3><a ng-href="#" ng-click="gotoLocationView(selectedShow.coverage)">{{selectedShow.coverage}}</a></h3>
 			<h3><a ng-href="#" ng-click="gotoVenueView(selectedShow.venue, selectedShow.coverage)">{{selectedShow.venue}}</a></h3>
 
+
+			
 			<div id="img_scroll">
 				<ul class="images">
 					<li>
@@ -51,6 +53,7 @@
 					</li>
 				</ul>
 			</div>
+			
 
 			<div ng-repeat="s in selectedShow.setlist">
 				<a ng-if="s.inSampleSongs" ng-href="#" ng-click="gotoSongView(s.plainTitle)">{{s.title}}</a>
@@ -93,9 +96,10 @@
 			<div id="flex_align">
 			    <div id="flex_narrow">
 				    <h3>Shows:</h3>
-					<div ng-repeat="s in selectedLocation.shows">
+					<!-- <div ng-repeat="s in selectedLocation.shows.sort((a, b)=>a.title.slice(-10)<b.title.slice(-10)? -1: 1)"> -->
+					<div ng-repeat="s in selectedLocation.shows"> 
 						<div class="padit">
-							<a ng-href="#" ng-click="gotoShowView(s.identifier)">{{s.title}}</a>
+							<a ng-href="#" ng-click="gotoShowView(s.identifier)">{{  s.title.slice(22, -14) }}: {{  s.title.slice(-10) }} </a>
 						</div>
 					</div>
 				</div>
@@ -106,7 +110,7 @@
 				</div>
 			</div>
 
-			<br>
+			<br><br>
 			<div id="img_scroll">
 				<ul class="images">
 					<li ng-repeat="i in selectedLocation.images">
@@ -189,19 +193,17 @@
 
 			</div>
 
+		</div>
+	
+	<div class="videoContainer">
+	    <div class="overlay"></div>
+	    <video autoplay loop muted>
+	        <source src="video/gd1.mp4" type="video/mp4">
+			<!-- <source src="https://archive.org/download/youtube-pu-y6rqV53g/Haight_Ashbury_Grateful_Dead_Morning_Dew-pu-y6rqV53g.mp4" type="video/mp4">  -->
 
-			<div class="videoContainer">
-			    <div class="overlay"></div>
-			    <video autoplay loop muted>
-			        <source src="video/gd1.mp4" type="video/mp4">
-					<!-- <source src="https://archive.org/download/youtube-pu-y6rqV53g/Haight_Ashbury_Grateful_Dead_Morning_Dew-pu-y6rqV53g.mp4" type="video/mp4">  -->
-
-			    </video>
-			</div>
-
-
-
+	    </video>
 	</div>
+	
 
 
 </body>

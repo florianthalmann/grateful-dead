@@ -9,9 +9,6 @@
 		}])
 		.controller('MainController', ['$scope', '$http', function($scope, $http) {
 
-			window.AudioContext = window.AudioContext || window.webkitAudioContext;
-			var context = new AudioContext();
-
 			$scope.SHOW_VIEW = "Show View";
 			$scope.SONG_VIEW = "Song View";
 			$scope.LOCATION_VIEW = "Location View";
@@ -151,45 +148,13 @@
 			}
 
 			$scope.onClick = function(item) {
-				console.log(item.mp.value)
-				//window.location.href = item.id.value;
-				//window.open(item.id.value,'_blank');
-				play(item.mp.value);
+				console.log(item)
+				//window.location.href = item;
+				window.open(item,'_blank');
+				
 			}
 
-			var audio;
 
-			function play(url) {
-				stop();
-				audio = new Audio();
-				audio.crossOrigin = "anonymous";
-				var source = context.createMediaElementSource(audio);
-				source.connect(context.destination);
-				audio.src = url;
-				audio.play();
-			}
-
-			function stop() {
-				if (audio) {
-					audio.pause();
-				}
-			}
-
-			//play('http://archive.org/download/gd1982-10-10.123624.senn421.gans.miller.flac16/gd82-10-10d3t08.mp3');
-
-			function getSubBuffer(buffer, fromSample, durationInSamples) {
-				//console.log(buffer, buffer.numberOfChannels, buffer.length, fromSample, durationInSamples, buffer.sampleRate)
-				var samplesToCopy = durationInSamples? Math.min(buffer.length-fromSample, durationInSamples): buffer.length-fromSample;
-				var subBuffer = audioContext.createBuffer(buffer.numberOfChannels, samplesToCopy, buffer.sampleRate);
-				for (var i = 0; i < buffer.numberOfChannels; i++) {
-					var currentCopyChannel = subBuffer.getChannelData(i);
-					var currentOriginalChannel = buffer.getChannelData(i);
-					for (var j = 0; j < samplesToCopy; j++) {
-						currentCopyChannel[j] = currentOriginalChannel[fromSample+j];
-					}
-				}
-				return subBuffer;
-			}
 
 			$scope.queryButton = function(y, m, d) {
 				//console.log(d)
@@ -199,27 +164,29 @@
 				m = "10"
 				d = "10"
 				var q = "PREFIX etree: <http://etree.linkedmusic.org/vocab/> \
-				PREFIX mo: <http://purl.org/ontology/mo/> \
-				PREFIX tl: <http://purl.org/NET/c4dm/timeline.owl#> \
-				PREFIX lma: <http://example.com/lma/vocab/> \
-				PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> \
-				PREFIX event: <http://purl.org/NET/c4dm/event.owl#> \
-				SELECT ?id ?track ?file ?mp ?start ?end ?dur \
-				WHERE { ?event event:time [ tl:atDate \"VAR0-VAR1-VAR2\"^^xsd:date ] ; \
+		PREFIX mo: <http://purl.org/ontology/mo/> \
+		PREFIX tl: <http://purl.org/NET/c4dm/timeline.owl#> \
+		PREFIX lma: <http://example.com/lma/vocab/> \
+        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> \
+		PREFIX event: <http://purl.org/NET/c4dm/event.owl#> \
+		SELECT ?id ?track ?file ?mp ?start ?end ?dur \
+		WHERE { ?event event:time [ tl:atDate \"VAR0-VAR1-VAR2\"^^xsd:date ] ; \
 					event:hasSubEvent [ lma:etree_concert ?id ] . \
-					?id event:hasSubEvent ?track . \
-					?track etree:audio ?file . \
-					?track etree:audio ?mp . \
-					?file mo:encodes ?signal . \
-					?signal mo:time [ tl:timeline [ a lma:ReferenceTimeLine ] ; \
-					tl:start ?start ; \
-					tl:end ?end ] ,  \
-					[ tl:timeline ?sigtime ; \
-					tl:duration ?dur ] . \
-					FILTER NOT EXISTS { ?sigtime a lma:ReferenceTimeLine } \
-					FILTER (STRENDS(str(?mp), \"mp3\")) \
-				} \
-				ORDER BY ASC(?id)".replace(/VAR0/g, y).replace(/VAR1/g, m).replace(/VAR2/g, d);
+				 ?id event:hasSubEvent ?track . \
+				 ?track etree:audio ?file . \
+				 ?track etree:audio ?mp . \
+				 ?file mo:encodes ?signal . \
+				 ?signal mo:time [ tl:timeline [ a lma:ReferenceTimeLine ] ; \
+			 					   tl:start ?start ; \
+								   tl:end ?end ] ,  \
+							     [ tl:timeline ?sigtime ; \
+								   tl:duration ?dur ] . \
+				FILTER NOT EXISTS { ?sigtime a lma:ReferenceTimeLine } \
+				FILTER (STRENDS(str(?mp), \"mp3\")) \
+			  } \
+			  ORDER BY ASC(?id)".replace(/VAR0/g, y).replace(/VAR1/g, m).replace(/VAR2/g, d);
+			  
+			  console.log(q)
 
 				testQuery(q, function(r){
 
@@ -237,7 +204,6 @@
 						dict[id].push([file, start, end, dur])
 					}
 					*/
-
 
 
 					//$scope.bs = r.results.bindings;
@@ -312,26 +278,30 @@
 				});
 			}
 
+
+				
 			function getImages(searchQuery, callback) {
-
-
-				// LINKS ARE IN llist array:
-
+				
+				
+				var proxy = "http://cors.5apps.com/?uri=https://www.google.com/search?site=&tbm=isch&q="
+			
 				var xhr = new XMLHttpRequest();
-				xhr.open("GET", "https://cors.now.sh/https://www.google.com/search?site=&tbm=isch&q=" + searchQuery, true);
+				xhr.open("GET", proxy + searchQuery, true);
+
 				xhr.onload = function (e) {
 				  if (xhr.readyState === 4) {
 				    if (xhr.status === 200) {
-				      console.log(xhr.responseText);
-					var llist = xhr.responseText.match(/https:\/\/encrypted-tbn(.*?)\.gstatic\.com\/images\?q=tbn:(.*?)\\\"/g);
+
+					var llist = xhr.responseText.match(/\"ou\":\"(.*?)\"\,/g);
+
 					llist.forEach(function(part, index, theArray) {
-					  theArray[index] = theArray[index].slice(0,-2);
+					  theArray[index] = theArray[index].slice(6,-2);
 					});
-
-					console.log(llist.slice(0,5))
-
-
-					callback(llist.slice(0,5))
+					
+					console.log(llist.slice(0,10))
+					callback(llist.slice(0,10))
+					$scope.$apply();
+					
 
 				    } else {
 				      console.error(xhr.statusText);
@@ -342,15 +312,14 @@
 				  console.error(xhr.statusText);
 				};
 				xhr.send(null);
+				
 
-
-			/*
-
+				/*
 				$http.get('https://www.googleapis.com/customsearch/v1?key=' + API_KEY + '&cx=' + SEARCH_ID + '&searchType=image&q=' + searchQuery).success(function(data) {
 					callback(data.items.map(function(i){console.log(i.link); return i.link;}).slice(0,5));
 				});
 
-*/
+				*/
 
 			}
 
@@ -399,11 +368,11 @@
 
 
 
-			$scope.gotoWelcomeView()
+			
 
 			//INIT
 
-
+			$scope.gotoWelcomeView()
 
 
 

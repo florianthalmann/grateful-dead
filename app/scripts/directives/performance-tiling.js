@@ -81,7 +81,7 @@
 
 						rects.enter()
 							.append("rect")
-							.on("click", d => scope.onClick({item: d}))
+							.on("click", d => scope.onClick({item: d.track.value}))
 							.style("fill", d => getHsl(d.dur.value))
 							.style("opacity", 0.2)
 							.attr("x", d => xScale(d.start.value))
