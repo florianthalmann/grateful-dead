@@ -182,7 +182,7 @@
 							     [ tl:timeline ?sigtime ; \
 								   tl:duration ?dur ] . \
 				FILTER NOT EXISTS { ?sigtime a lma:ReferenceTimeLine } \
-									 FILTER (STRENDS(str(?mp), \"mp3\")) \
+				FILTER (STRENDS(str(?mp), \"mp3\")) \
 			  } \
 			  ORDER BY ASC(?id)".replace(/VAR0/g, y).replace(/VAR1/g, m).replace(/VAR2/g, d);
 			  
@@ -204,7 +204,6 @@
 						dict[id].push([file, start, end, dur])
 					}
 					*/
-
 
 
 					//$scope.bs = r.results.bindings;
@@ -280,8 +279,6 @@
 			}
 
 
-
-				
 				
 			function getImages(searchQuery, callback) {
 				
