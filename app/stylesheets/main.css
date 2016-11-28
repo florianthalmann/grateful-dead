@@ -16,6 +16,7 @@ h1, h2, h3, body, button, input, select {
 	
 	padding:5px 10px;
 	color: #757575;
+	
 }
 
 h1 { font-size: 250%; }
@@ -172,8 +173,7 @@ button:hover {
 
 #img_scroll {
     position: relative;
-    border: 2px solid #757575;
-    border-radius: 3px;
+    /*border: 2px solid #53f442;*/
 }
 
 ul.images {
@@ -182,7 +182,7 @@ ul.images {
   white-space: nowrap;
   /* width: 1000px; */
   overflow-x: auto;
-  background-color: #151515;
+  /*background-color: #151515;*/
 }
 ul.images li {
   display: inline;
@@ -194,7 +194,9 @@ ul.images li {
 #flex_narrow {
   width: 500px;
   padding-left: 10px;
-  background-color: #151515;
+  /*background-color: #151515;
+  opacity: 0.8;*/
+  
 /*  border: 3px solid #757575;
   border-radius: 2px; */
   
@@ -209,3 +211,11 @@ ul.images li {
 	padding: 0px 8px;
 }
 
+
+a:link {
+    color: #757575;
+}
+
+a:visited {
+    color: #999999;
+}
