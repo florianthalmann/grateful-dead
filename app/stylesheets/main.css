@@ -173,8 +173,8 @@ button:hover {
 
 #img_scroll {
     position: relative;
-    border: 2px solid #757575;
-    border-radius: 3px;
+    /*border: 2px solid #757575;
+    border-radius: 3px;*/
 }
 
 ul.images {
@@ -195,7 +195,9 @@ ul.images li {
 #flex_narrow {
   width: 500px;
   padding-left: 10px;
-  background-color: #151515;
+  /*background-color: #151515;
+  opacity: 0.8;*/
+  
 /*  border: 3px solid #757575;
   border-radius: 2px; */
   
